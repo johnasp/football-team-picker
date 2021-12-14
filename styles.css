@@ -1,0 +1,25 @@
+html, body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 1fr;
+      grid-template-columns: 300px 1fr;
+  height: 100vh;
+}
+
+.controls {
+  background: grey;
+}
+
+.pitch {
+  background: green;
+}
+/*# sourceMappingURL=styles.css.map */
