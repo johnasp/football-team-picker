@@ -8,9 +8,10 @@ const request = new XMLHttpRequest()
 
 // 3. Check for when the data file has been successfully delivered i.e. 'the ready stats is code 4' 
 request.addEventListener('readystatechange', function() {
-   console.log(request, request.readyState)
-   if (request.readyState === 4) {
-      console.log(request.responseText)
+   if (request.readyState === 4 && request.status === 200) { // checking status codes for successful data transfer
+      console.log(`The readyState is ${request.readyState} and statusCode is ${request.status}`)
+   } else {
+      console.log(`The readyState is ${request.readyState} and statusCode is ${request.status}`)
    }
 })
 
