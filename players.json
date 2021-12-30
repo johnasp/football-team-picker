@@ -1,125 +1,126 @@
 
-{
-   "name": "Chris Maxwell",
-   "shirtNumber": 1
-}
-{
-   "name": "Keshi Anderson",
-   "shirtNumber": 10
-}
-{
-   "name": "Josh Bowler",
-   "shirtNumber": 11
-}
-{
-   "name": "Kenny Dougall",
-   "shirtNumber": 12
-}
-{
-   "name": "Stuart Moore",
-   "shirtNumber": 13
-}
-{
-   "name": "Gary Madine",
-   "shirtNumber": 14
-}
-{
-   "name": "Demetri Mitchell",
-   "shirtNumber": 15
-}
-{
-   "name": "Sonny Carey",
-   "shirtNumber": 16
-}
-{
-   "name": "Matty Virtue",
-   "shirtNumber": 17
-}
-{
-   "name": "Grant Ward",
-   "shirtNumber": 18
-}
-{
-   "name": "Shayne Lavery",
-   "shirtNumber": 19
-}
-{
-   "name": "Callum Connolly",
-   "shirtNumber": 2
-}
-{
-   "name": "Oliver Casey",
-   "shirtNumber": 20
-}
-{
-   "name": "Marvin Ekpiteta",
-   "shirtNumber": 21
-}
-{
-   "name": "CJ Hamilton",
-   "shirtNumber": 22
-}
-{
-   "name": "Daniel Grétarsson",
-   "shirtNumber": 23
-}
-{
-   "name": "Joe Nuttall",
-   "shirtNumber": 24
-}
-{
-   "name": "Richard Keogh",
-   "shirtNumber": 26
-}
-{
-   "name": "Oliver Sarkic",
-   "shirtNumber": 27
-}
-{
-   "name": "Tyreece John-Jules",
-   "shirtNumber": 28
-}
-{
-   "name": "Luke Garbutt",
-   "shirtNumber": 29
-}
-{
-   "name": "James Husband",
-   "shirtNumber": 3
-}
-{
-   "name": "Daniel Grimshaw",
-   "shirtNumber": 32
-}
-{
-   "name": "Dujon Sterling",
-   "shirtNumber": 35, 
 
-}
 {
-   "name": "Jordan Gabriel",
-   "shirtNumber": 4
+  "players": [
+    {
+      "name": "Chris Maxwell",
+      "shirtNumber": 1
+    },
+    {
+      "name": "Keshi Anderson",
+      "shirtNumber": 10
+    },
+    {
+      "name": "Josh Bowler",
+      "shirtNumber": 11
+    },
+    {
+      "name": "Kenny Dougall",
+      "shirtNumber": 12
+    },
+    {
+      "name": "Stuart Moore",
+      "shirtNumber": 13
+    },
+    {
+      "name": "Gary Madine",
+      "shirtNumber": 14
+    },
+    {
+      "name": "Demetri Mitchell",
+      "shirtNumber": 15
+    },
+    {
+      "name": "Sonny Carey",
+      "shirtNumber": 16
+    },
+    {
+      "name": "Matty Virtue",
+      "shirtNumber": 17
+    },
+    {
+      "name": "Grant Ward",
+      "shirtNumber": 18
+    },
+    {
+      "name": "Shayne Lavery",
+      "shirtNumber": 19
+    },
+    {
+      "name": "Callum Connolly",
+      "shirtNumber": 2
+    },
+    {
+      "name": "Oliver Casey",
+      "shirtNumber": 20
+    },
+    {
+      "name": "Marvin Ekpiteta",
+      "shirtNumber": 21
+    },
+    {
+      "name": "CJ Hamilton",
+      "shirtNumber": 22
+    },
+    {
+      "name": "Daniel Grétarsson",
+      "shirtNumber": 23
+    },
+    {
+      "name": "Joe Nuttall",
+      "shirtNumber": 24
+    },
+    {
+      "name": "Richard Keogh",
+      "shirtNumber": 26
+    },
+    {
+      "name": "Oliver Sarkic",
+      "shirtNumber": 27
+    },
+    {
+      "name": "Tyreece John-Jules",
+      "shirtNumber": 28
+    },
+    {
+      "name": "Luke Garbutt",
+      "shirtNumber": 29
+    },
+    {
+      "name": "James Husband",
+      "shirtNumber": 3
+    },
+    {
+      "name": "Daniel Grimshaw",
+      "shirtNumber": 32
+    },
+    {
+      "name": "Dujon Sterling",
+      "shirtNumber": 35
+    },
+    {
+      "name": "Jordan Gabriel",
+      "shirtNumber": 4
+    },
+    {
+      "name": "Reece James",
+      "shirtNumber": 5
+    },
+    {
+      "name": "Kevin Stewart",
+      "shirtNumber": 6
+    },
+    {
+      "name": "Owen Dale",
+      "shirtNumber": 7
+    },
+    {
+      "name": "Ryan Wintle",
+      "shirtNumber": 8
+    },
+    {
+      "name": "Jerry Yates",
+      "shirtNumber": 9
+    }
+  ]
 }
-{
-   "name": "Reece James",
-   "shirtNumber": 5
-}
-{
-   "name": "Kevin Stewart",
-   "shirtNumber": 6
-}
-{
-   "name": "Owen Dale",
-   "shirtNumber": 7
-}
-{
-   "name": "Ryan Wintle",
-   "shirtNumber": 8
-}
-{
-   "name": "Jerry Yates",
-   "shirtNumber": 9
-}
-
-
-
