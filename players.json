@@ -7,6 +7,38 @@
       "shirtNumber": 1
     },
     {
+      "name": "Callum Connolly",
+      "shirtNumber": 2
+    },
+    {
+      "name": "James Husband",
+      "shirtNumber": 3
+    },
+    {
+      "name": "Jordan Gabriel",
+      "shirtNumber": 4
+    },
+    {
+      "name": "Reece James",
+      "shirtNumber": 5
+    },
+    {
+      "name": "Kevin Stewart",
+      "shirtNumber": 6
+    },
+    {
+      "name": "Owen Dale",
+      "shirtNumber": 7
+    },
+    {
+      "name": "Ryan Wintle",
+      "shirtNumber": 8
+    },
+    {
+      "name": "Jerry Yates",
+      "shirtNumber": 9
+    },
+    {
       "name": "Keshi Anderson",
       "shirtNumber": 10
     },
@@ -47,10 +79,6 @@
       "shirtNumber": 19
     },
     {
-      "name": "Callum Connolly",
-      "shirtNumber": 2
-    },
-    {
       "name": "Oliver Casey",
       "shirtNumber": 20
     },
@@ -87,40 +115,13 @@
       "shirtNumber": 29
     },
     {
-      "name": "James Husband",
-      "shirtNumber": 3
-    },
-    {
       "name": "Daniel Grimshaw",
       "shirtNumber": 32
     },
     {
       "name": "Dujon Sterling",
       "shirtNumber": 35
-    },
-    {
-      "name": "Jordan Gabriel",
-      "shirtNumber": 4
-    },
-    {
-      "name": "Reece James",
-      "shirtNumber": 5
-    },
-    {
-      "name": "Kevin Stewart",
-      "shirtNumber": 6
-    },
-    {
-      "name": "Owen Dale",
-      "shirtNumber": 7
-    },
-    {
-      "name": "Ryan Wintle",
-      "shirtNumber": 8
-    },
-    {
-      "name": "Jerry Yates",
-      "shirtNumber": 9
     }
+
   ]
 }

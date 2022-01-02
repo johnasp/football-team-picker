@@ -15,4 +15,60 @@ body {
 }
 .pitch {
    background: green;
+   .team {
+      display: grid;
+      height: 100%;
+      grid-auto-rows: 100px;
+      gap: 10px;
+   }
+   .player {
+      border: 1px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
 } 
+.formation-442 {
+   grid-template-columns: repeat(4, 100px);
+   grid-template-areas: 
+      "g g g g"
+      "d3 d4 d5 d2"
+      "m11 m6 m8 m7"
+      ". f9 f10 .";
+   .player-1 {
+      grid-area: g;
+   }
+   //Defenders
+   .player-2 {
+      grid-area: d2;
+   }
+   .player-3 {
+      grid-area: d3;
+   }
+   .player-4 {
+      grid-area: d4;
+   }
+   .player-5 {
+      grid-area: d5;
+   }
+   //Midfield
+   .player-6 {
+      grid-area: m11;
+   }
+   .player-7 {
+      grid-area: m6;
+   }
+   .player-8 {
+      grid-area: m8;
+   }
+   .player-11 {
+      grid-area: m7;
+   }
+   //Forwards
+   .player-9 {
+      grid-area: f9;
+   }
+   .player-10 {
+      grid-area: f10;
+   }
+}

@@ -22,4 +22,98 @@ body {
 .pitch {
   background: green;
 }
+
+.pitch .team {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  grid-auto-rows: 100px;
+  gap: 10px;
+}
+
+.pitch .player {
+  border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.formation-442 {
+  -ms-grid-columns: (100px)[4];
+      grid-template-columns: repeat(4, 100px);
+      grid-template-areas: "g g g g" "d3 d4 d5 d2" "m11 m6 m8 m7" ". f9 f10 .";
+}
+
+.formation-442 .player-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: g;
+}
+
+.formation-442 .player-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: d2;
+}
+
+.formation-442 .player-3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: d3;
+}
+
+.formation-442 .player-4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: d4;
+}
+
+.formation-442 .player-5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: d5;
+}
+
+.formation-442 .player-6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: m11;
+}
+
+.formation-442 .player-7 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: m6;
+}
+
+.formation-442 .player-8 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: m8;
+}
+
+.formation-442 .player-11 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: m7;
+}
+
+.formation-442 .player-9 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: f9;
+}
+
+.formation-442 .player-10 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: f10;
+}
 /*# sourceMappingURL=styles.css.map */
