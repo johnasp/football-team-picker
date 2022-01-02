@@ -1,10 +1,18 @@
 // https://www.youtube.com/watch?v=C3dfjyft_m4 
 
-const playersEl = document.querySelector('.players')
-fetch('players.json')
-   .then(response => response.json()) // converts JSON from string to array
-   .then(data => {
-      console.log(data.players)
-      
+function renderPlayers() {
+   const playersEl = document.querySelector('.players')
+   fetch('players.json')
+      .then(
+         response => response.json()) // converts JSON from string to array
+      .then(data => {
+         for (let i = 0; i < data.players.length; i++ ) {
+            const playerName = data.players[i].name
+            const shirtNumber = data.players[i].shirtNumber
+            const player = shirtNumber + " - " + playerName
+            playersEl.innerHTML += `<p>${player}</p>`
+         }
+      })    
+}
 
-   })
+renderPlayers()
