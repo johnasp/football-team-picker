@@ -1,3 +1,7 @@
+html {
+  font-size: 10px;
+}
+
 html, body {
   height: 100vh;
 }
@@ -5,6 +9,8 @@ html, body {
 body {
   margin: 0;
   padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.6rem;
 }
 
 .container {
@@ -17,22 +23,59 @@ body {
 
 .controls {
   background: rgba(128, 128, 128, 0.274);
+  padding: 1em;
+  overflow: auto;
+}
+
+.controls label, .controls select, .controls textarea {
+  display: block;
+  width: 100%;
+}
+
+.controls label {
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+.controls select {
+  font-size: 1.6rem;
+  padding: .3em .6em;
+  margin-bottom: 1em;
+}
+
+.controls__player {
+  display: block;
+  background: white;
+  padding: 0.5em 1em;
+  margin-bottom: 12px;
+}
+
+.controls__player:hover {
+  background: cornflowerblue;
+  cursor: pointer;
 }
 
 .pitch {
-  background: green;
+  position: relative;
 }
 
-.pitch .team {
+.pitch .pitch__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pitch .pitch__team-grid {
+  position: relative;
   display: -ms-grid;
   display: grid;
   height: 100%;
-  grid-auto-rows: 100px;
-  gap: 10px;
+  gap: 50px;
 }
 
-.pitch .player {
-  border: 1px solid white;
+.pitch__player {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,55 +85,95 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pitch__player i {
+  background: url("images/shirt.svg") no-repeat;
+  display: block;
+  width: 100%;
+  min-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pitch__player i.unpicked {
+  background: url("images/circle-solid.svg") no-repeat;
+}
+
+.pitch__player .pitch__player-number {
+  color: white;
+  font-size: 4rem;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+}
+
+.pitch__player .pitch__player-name {
+  background: black;
+  color: blanchedalmond;
+  font-size: 16px;
+  padding: 0.3em 0.6em;
+  margin: 0;
 }
 
 .formation-442 {
   -ms-grid-columns: (100px)[4];
       grid-template-columns: repeat(4, 100px);
-      grid-template-areas: "g g g g" "d3 d4 d5 d2" "m11 m6 m8 m7" ". f9 f10 .";
+      grid-template-areas: "g d2 m6 ." "g d3 m7 f9" "g d4 m8 f10" "g d5 m11 .";
 }
 
 .formation-442 .player-1 {
   -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-area: g;
 }
 
 .formation-442 .player-2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 4;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: d2;
 }
 
 .formation-442 .player-3 {
   -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   grid-area: d3;
 }
 
 .formation-442 .player-4 {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: d4;
 }
 
 .formation-442 .player-5 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
   grid-area: d5;
 }
 
 .formation-442 .player-6 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: m11;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: m6;
 }
 
 .formation-442 .player-7 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: m6;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: m7;
 }
 
 .formation-442 .player-8 {
@@ -100,20 +183,20 @@ body {
 }
 
 .formation-442 .player-11 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 4;
-  grid-area: m7;
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: m11;
 }
 
 .formation-442 .player-9 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
   grid-area: f9;
 }
 
 .formation-442 .player-10 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 3;
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
   grid-area: f10;
 }
 /*# sourceMappingURL=styles.css.map */

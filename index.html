@@ -5,53 +5,118 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="styles.css">
    <script src="scripts.js" defer ></script>
+   <script src="https://kit.fontawesome.com/7cca6fbe68.js" crossorigin="anonymous"></script>
 </head> 
-<body>
-   <main class="container">
+<y>
+   <y class="container">
       <nav class="controls">
-         <ul class="players-list">
 
-         </ul>
+         <div class="controls__header">
+            <button><i class="fas fa-bars"></i></button>
+         </div>
+
+         <div class="controls__formation">
+            <label for="formations">Formation</label>
+            <select name="formations" id="formation">
+               <option value="442">4-4-2</option>
+               <option value="433">4-3-3</option>
+               <option value="532">5-3-2</option>
+               <option value="352">3-5-2</option>
+            </select>
+         </div>
+
+         <div class="controls__club">
+            <label for="club">Club</label>
+            <select name="club" id="club">
+               <option value="Blackpool">Blackpool</option>
+               <option value="pne">PNE</option>
+               <option value="Bolton">Bolton</option>
+               <option value="352"></option>
+            </select>
+         </div>
+
+
+         <div class="controls__players">
+            <label for="">Player list</label>
+         </div>
       </nav>
+
       <section class="pitch">
-         <div class="team formation-442">
-            <div class="player player-1">
-               <p>1</p>
+         
+         <img class="pitch__img" src="images/pitch.png" alt="A football pitch used for the background">
+
+         <div class="pitch__team-grid formation-442">
+            <div class="pitch__player player-1">
+               <i class="unpicked">
+                  <span class="pitch__player-number">1</span>
+               </i>
+               <p class="pitch__player-name">Player name</p>
             </div>
-            <div class="player player-2">
-               <p>2</p>
+            <div class="pitch__player player-2">
+               <i>
+                  <span class="pitch__player-number">2</span>
+               </i>
+               <p class="pitch__player-name">Player name</p>
             </div>
-            <div class="player player-3">
-               <p>3</p>
+            <div class="pitch__player player-3">
+               <i>
+                  <span class="pitch__player-number">3</span>
+               </i>
+               <p class="pitch__player-name">Player name</p>
             </div>
-            <div class="player player-4">
-               <p>4</p>
+            <div class="pitch__player player-4">
+               <i>
+                  <span class="pitch__player-number">4</span>
+               </i>
+               <p class="pitch__player-name">Player name</p>
             </div>
-            <div class="player player-5">
-               <p>5</p>
+            <div class="pitch__player player-5">
+               <i>
+                  <span class="pitch__player-number">5</span>
+               </i>
+               <p class="pitch__player-name">Player name</p>
             </div>
-            <div class="player playe-6">
-               <p>6</p>
+            <div class="pitch__player playe-6"">
+               <i>
+                  <span class="pitch__player-number">6</span>
+               </i>
+               <p class="pitch__player-name">Player name</p>
             </div>
-            <div class="player player-7">
-               <p>7</p>
+            <div class="pitch__player player-7">
+               <i>
+                  <span class="pitch__player-number">7</span>
+               </i>
+               <p class="pitch__player-name">Player name</p>
             </div>
-            <div class="player player-8">
-               <p>8</p>
+            <div class="pitch__player player-8">
+               <i>
+                  <span class="pitch__player-number">8</span>
+               </i>
+               <p class="pitch__player-name">Player name</p>
             </div>
-            <div class="player player-9">
-               <p>9</p>
+            <div class="pitch__player player-9">
+               <i>
+                  <span class="pitch__player-number">9</span>
+               </i>
+               <p class="pitch__player-name">Player name</p>
             </div>
-            <div class="player player-10">
-               <p>10</p>
+            <div class="pitch__player player-10">
+               <i>
+                  <span class="pitch__player-number">10</span>
+               </i>
+               <p class="pitch__player-name">Player name</p>
             </div>
-            <div class="player player-11">
-               <p>11</p>
+            <div class="pitch__player player-11">
+               <i>
+                  <span class="pitch__player-number">11</span>
+               </i>
+               <p class="pitch__player-name">Player name</p>
             </div>
          </div>
-      </section>
-   </main>
-</body>
-</html>
+      </section >
+>

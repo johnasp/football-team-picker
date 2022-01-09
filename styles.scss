@@ -1,9 +1,14 @@
+html {
+   font-size: 10px;
+}
 html, body {
    height: 100vh;
 }
 body {
    margin: 0;
    padding: 0;
+   font-family: 'IBM Plex Sans', sans-serif;
+   font-size: 1.6rem;
 }
 .container {
    display: grid;
@@ -12,29 +17,89 @@ body {
 }
 .controls {
    background: rgba(128, 128, 128, 0.274);
+   padding: 1em;
+   overflow: auto;
+   label, select, textarea {
+      display: block;
+      width: 100%;
+   }
+   label {
+      font-weight: bold;
+      margin-bottom: 0.2em;
+   }
+   select {
+      font-size: 1.6rem;
+      padding: .3em .6em;
+      margin-bottom: 1em;
+   }
+}
+.controls__player {
+      display: block;
+      background: rgb(255, 255, 255);
+      padding: 0.5em 1em;
+      margin-bottom: 12px;
+      &:hover {
+         background: cornflowerblue;
+         cursor: pointer;
+      }
 }
 .pitch {
-   background: green;
-   .team {
+   position: relative;
+   .pitch__img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   .pitch__team-grid {
+      position: relative;
       display: grid;
       height: 100%;
-      grid-auto-rows: 100px;
-      gap: 10px;
-   }
-   .player {
-      border: 1px solid white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      gap: 50px;
    }
 } 
+.pitch__player {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   i {
+      background: url('images/shirt.svg') no-repeat;
+      display: block;
+      width: 100%;
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.unpicked {
+         background: url('images/circle-solid.svg') no-repeat;
+      }
+   }
+   .pitch__player-number {
+      color: white;
+      font-size: 4rem;
+      font-weight: 600;
+      display: block;
+      text-align: center;
+
+   }
+   .pitch__player-name {
+      background: black;
+      color: blanchedalmond;
+      font-size: 16px;
+      padding: 0.3em 0.6em;
+      margin: 0;
+   }
+}
+
+// 442 //
 .formation-442 {
    grid-template-columns: repeat(4, 100px);
    grid-template-areas: 
-      "g g g g"
-      "d3 d4 d5 d2"
-      "m11 m6 m8 m7"
-      ". f9 f10 .";
+      "g d2 m6 ."
+      "g d3 m7 f9"
+      "g d4 m8 f10"
+      "g d5 m11 .";
    .player-1 {
       grid-area: g;
    }
@@ -53,16 +118,16 @@ body {
    }
    //Midfield
    .player-6 {
-      grid-area: m11;
+      grid-area: m6;
    }
    .player-7 {
-      grid-area: m6;
+      grid-area: m7;
    }
    .player-8 {
       grid-area: m8;
    }
    .player-11 {
-      grid-area: m7;
+      grid-area: m11;
    }
    //Forwards
    .player-9 {
