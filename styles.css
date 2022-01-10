@@ -13,6 +13,10 @@ body {
   font-size: 1.6rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   display: -ms-grid;
   display: grid;
@@ -91,24 +95,25 @@ body {
           flex-direction: column;
 }
 
-.pitch__player i {
-  background: url("images/shirt.svg") no-repeat;
-  display: block;
-  width: 100%;
-  min-height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.pitch__player .pitch__player-wrapper {
+  position: relative;
 }
 
-.pitch__player i.unpicked {
-  background: url("images/circle-solid.svg") no-repeat;
+.pitch__player .pitch__player-wrapper img {
+  min-width: 100px;
+}
+
+.pitch__player .pitch__player-wrapper span {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.pitch__player .pitch__player-wrapper .pitch__player-circle {
+  width: 50px;
 }
 
 .pitch__player .pitch__player-number {
@@ -119,7 +124,7 @@ body {
   text-align: center;
 }
 
-.pitch__player .pitch__player-name {
+.pitch__player .pitch__player-label {
   background: black;
   color: blanchedalmond;
   font-size: 16px;
@@ -128,8 +133,8 @@ body {
 }
 
 .formation-442 {
-  -ms-grid-columns: (100px)[4];
-      grid-template-columns: repeat(4, 100px);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
       grid-template-areas: "g d2 m6 ." "g d3 m7 f9" "g d4 m8 f10" "g d5 m11 .";
 }
 
@@ -198,5 +203,9 @@ body {
   -ms-grid-row: 3;
   -ms-grid-column: 4;
   grid-area: f10;
+}
+
+.hide {
+  display: none !important;
 }
 /*# sourceMappingURL=styles.css.map */
