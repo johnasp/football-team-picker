@@ -26,7 +26,7 @@ img {
 }
 
 .controls {
-  background: rgba(128, 128, 128, 0.274);
+  background: rgba(218, 218, 218, 0.274);
   padding: 1em;
   overflow: auto;
 }
@@ -47,16 +47,30 @@ img {
   margin-bottom: 1em;
 }
 
+.controls__header {
+  margin-bottom: 0.6em;
+  text-align: right;
+}
+
+.controls__header button {
+  font-size: 1.6em;
+  border: none;
+  background: none;
+}
+
 .controls__player {
   display: block;
   background: white;
   padding: 0.5em 1em;
   margin-bottom: 12px;
+  border: 1px dashed #818181;
 }
 
 .controls__player:hover {
-  background: cornflowerblue;
+  background: #edffee;
+  border: 1px dashed #003f00;
   cursor: pointer;
+  border-radius: 6px;
 }
 
 .pitch {
