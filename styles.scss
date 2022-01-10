@@ -80,17 +80,15 @@ img {
       span {
          position: absolute;
          @include centerer;
+         color: white;
+         font-size: 4rem;
+         font-weight: 600;
+         display: block;
+         text-align: center;
       }
       .pitch__player-circle {
          width: 50px;
       }
-   }
-   .pitch__player-number {
-      color: white;
-      font-size: 4rem;
-      font-weight: 600;
-      display: block;
-      text-align: center;
    }
    .pitch__player-label {
       background: black;
@@ -98,6 +96,16 @@ img {
       font-size: 16px;
       padding: 0.3em 0.6em;
       margin: 0;
+   }
+   &.unpicked {
+      .pitch__player-shirt, .pitch__player-number, .pitch__player-label--picked {
+         display: none;
+      }
+   }
+   &.picked {
+      .pitch__player-circle, .pitch__player-character, .pitch__player-label--unpicked {
+         display: none;
+      }
    }
 }
 
