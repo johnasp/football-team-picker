@@ -16,7 +16,11 @@ function renderPlayers() {
 }
 renderPlayers()
 
-let playerItemEl = document.querySelector('.controls__player')
-playerItemEl.addEventListener('click', function() {
-   console.log('test')
+// Create node list of players
+const playerItems = document.querySelectorAll('.controls__players')
+
+playerItems.forEach(item => {
+   item.addEventListener('click', () => {
+      console.log('clicked')
+   })
 })

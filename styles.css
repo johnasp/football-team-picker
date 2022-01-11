@@ -63,14 +63,13 @@ img {
   background: white;
   padding: 0.5em 1em;
   margin-bottom: 12px;
-  border: 1px dashed #818181;
+  border: 1px dotted #3a3a3a;
 }
 
 .controls__player:hover {
   background: #edffee;
   border: 1px dashed #003f00;
   cursor: pointer;
-  border-radius: 6px;
 }
 
 .pitch {

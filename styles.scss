@@ -56,12 +56,11 @@ img {
       background: rgb(255, 255, 255);
       padding: 0.5em 1em;
       margin-bottom: 12px;
-      border: 1px dashed rgb(129, 129, 129);
+      border: 1px dotted rgb(58, 58, 58);
       &:hover {
          background: rgb(237, 255, 238);
          border: 1px dashed rgb(0, 63, 0);
          cursor: pointer;
-         border-radius: 6px;
       }
 }
 .pitch {
