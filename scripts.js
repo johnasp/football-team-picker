@@ -9,7 +9,7 @@ function renderPlayers() {
          for (let i = 0; i < data.players.length; i++ ) {
             const shirtNumber = data.players[i].shirtNumber
             const playerName = data.players[i].name
-            playersEl.innerHTML += `<a class="controls__player" id="shirt-${shirtNumber}" draggable="true" ondragstart="dragPlayer(event)">${shirtNumber} ${playerName}</a>`
+            playersEl.innerHTML += `<p class="controls__player" id="shirt-${shirtNumber}" draggable="true" ondragstart="dragPlayer(event)"><span>${shirtNumber}</span> ${playerName}</p>`
          }
       })    
 }

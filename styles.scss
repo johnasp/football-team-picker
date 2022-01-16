@@ -14,7 +14,8 @@ body {
    margin: 0;
    padding: 0;
    font-family: 'IBM Plex Sans', sans-serif;
-   font-size: 1.6rem;
+   font-size: 10px;
+   box-sizing: border-box;
 }
 img {
    max-width: 100%;
@@ -25,45 +26,60 @@ img {
    height: 100vh;
 }
 $ctr-pad: 0.5em;
-$ctr-bg: #ffebd5;
+$col-controls: #ffebd5;
 .controls {
    overflow: auto;
-   background: lighten($ctr-bg,6%);
+   background: lighten($col-controls,5%);
    .controls__header {
+      text-align: right;
       button {
-         font-size: 2.6rem;
+         font-size: 2rem;
          padding: .4em;
          border: none;
          background: none;
+         i {
+            margin-left: .3em;
+         }
       }
    }
    label, select, textarea {
       display: block;
    }
    label {
-      background: darken($ctr-bg,3%);
+      background: darken($col-controls,10%);
       padding: $ctr-pad;
+      font-size: 2rem;
    }
    select {
       font-size: 1.6rem;
       padding: .6em;
       margin: 1em;
    }
+   section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
 }
-
 .controls__player {
       display: block;
       padding: .8em;
       font-weight: bold;
       text-transform: uppercase;
-
+      font-size: 2rem;
+      padding: 0.5em 1em;
+      margin: 0;
+      span {
+         font-weight: normal;
+         min-width: 1.7em;
+         display: inline-block;
+         text-align: center;
+      }
       &:hover {
-         background: rgb(237, 255, 238);
-         border: 1px dashed rgb(0, 63, 0);
+         border: 3px dashed darken($col-controls,25%);
          cursor: pointer;
       }
-      &:nth-child(even) {
-         background: lighten($ctr-bg,3%);
+      &:nth-child(odd) {
+         background: lighten($col-controls,1%);
       }
 
 }

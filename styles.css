@@ -10,7 +10,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 1.6rem;
+  font-size: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 img {
@@ -27,14 +29,22 @@ img {
 
 .controls {
   overflow: auto;
-  background: #fffaf4;
+  background: #fff7ef;
+}
+
+.controls .controls__header {
+  text-align: right;
 }
 
 .controls .controls__header button {
-  font-size: 2.6rem;
+  font-size: 2rem;
   padding: .4em;
   border: none;
   background: none;
+}
+
+.controls .controls__header button i {
+  margin-left: .3em;
 }
 
 .controls label, .controls select, .controls textarea {
@@ -42,8 +52,9 @@ img {
 }
 
 .controls label {
-  background: #ffe4c6;
+  background: #ffd3a2;
   padding: 0.5em;
+  font-size: 2rem;
 }
 
 .controls select {
@@ -52,21 +63,37 @@ img {
   margin: 1em;
 }
 
+.controls section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
 .controls__player {
   display: block;
   padding: .8em;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 2rem;
+  padding: 0.5em 1em;
+  margin: 0;
+}
+
+.controls__player span {
+  font-weight: normal;
+  min-width: 1.7em;
+  display: inline-block;
+  text-align: center;
 }
 
 .controls__player:hover {
-  background: #edffee;
-  border: 1px dashed #003f00;
+  border: 3px dashed #ffae56;
   cursor: pointer;
 }
 
-.controls__player:nth-child(even) {
-  background: #fff2e4;
+.controls__player:nth-child(odd) {
+  background: #ffedda;
 }
 
 .pitch {
