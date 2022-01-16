@@ -26,50 +26,47 @@ img {
 }
 
 .controls {
-  background: rgba(218, 218, 218, 0.274);
-  padding: 1em;
   overflow: auto;
+  background: #fffaf4;
 }
 
-.controls label, .controls select, .controls textarea {
-  display: block;
-  width: 100%;
-}
-
-.controls label {
-  font-weight: bold;
-  margin-bottom: 0.2em;
-}
-
-.controls select {
-  font-size: 1.6rem;
-  padding: .3em .6em;
-  margin-bottom: 1em;
-}
-
-.controls__header {
-  margin-bottom: 0.6em;
-  text-align: right;
-}
-
-.controls__header button {
-  font-size: 1.6em;
+.controls .controls__header button {
+  font-size: 2.6rem;
+  padding: .4em;
   border: none;
   background: none;
 }
 
+.controls label, .controls select, .controls textarea {
+  display: block;
+}
+
+.controls label {
+  background: #ffe4c6;
+  padding: 0.5em;
+}
+
+.controls select {
+  font-size: 1.6rem;
+  padding: .6em;
+  margin: 1em;
+}
+
 .controls__player {
   display: block;
-  background: white;
-  padding: 0.5em 1em;
-  margin-bottom: 12px;
-  border: 1px dotted #3a3a3a;
+  padding: .8em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .controls__player:hover {
   background: #edffee;
   border: 1px dashed #003f00;
   cursor: pointer;
+}
+
+.controls__player:nth-child(even) {
+  background: #fff2e4;
 }
 
 .pitch {

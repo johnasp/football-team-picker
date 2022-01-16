@@ -7,11 +7,9 @@ function renderPlayers() {
       .then(response => response.json()) // converts JSON from string to array
       .then(data => {
          for (let i = 0; i < data.players.length; i++ ) {
-            //console.log (data)
-            const playerName = data.players[i].name
             const shirtNumber = data.players[i].shirtNumber
-            const player = shirtNumber + " - " + playerName
-            playersEl.innerHTML += `<a class="controls__player" id="shirt-${shirtNumber}" draggable="true" ondragstart="dragPlayer(event)">${player}</a>`
+            const playerName = data.players[i].name
+            playersEl.innerHTML += `<a class="controls__player" id="shirt-${shirtNumber}" draggable="true" ondragstart="dragPlayer(event)">${shirtNumber} ${playerName}</a>`
          }
       })    
 }
@@ -31,8 +29,11 @@ renderPlayers()
 // Drag and drop player 
 // ---------------------
  // Sets the data to transfer on drag
+// https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer - Docs for the dataTransfer object
+
  function dragPlayer(ev) {
-   ev.dataTransfer.setData("text", ev.target.textContent)
+   ev.dataTransfer.setData("text/plain", ev.target.textContent)
+   console.log(ev)
 }
 
 //overrides default behviour of the dragEvent not dropable
