@@ -155,8 +155,10 @@ img {
 }
 
 .pitch__player .pitch__player-label {
-  background: black;
-  color: blanchedalmond;
+  background: #ffebd5;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
   font-size: 16px;
   padding: 0.3em 0.6em;
   margin: 0;

@@ -119,8 +119,10 @@ $col-controls: #ffebd5;
       }
    }
    .pitch__player-label {
-      background: black;
-      color: blanchedalmond;
+      background: $col-controls;
+      color: black;
+      text-transform: uppercase;
+      font-weight: bold;
       font-size: 16px;
       padding: 0.3em 0.6em;
       margin: 0;
