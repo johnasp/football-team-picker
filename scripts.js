@@ -28,34 +28,22 @@ renderPlayers()
 // ---------------------
 // Drag and drop player 
 // ---------------------
- // Sets the data to transfer on drag
-// https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer - Docs for the dataTransfer object
-
- function dragPlayer(ev) {
-   ev.dataTransfer.setData("text/plain", ev.target.textContent)
-   console.log(ev)
-}
 
 //overrides default behviour of the dragEvent not dropable
 function allowPlayerDrop(ev) { 
    ev.preventDefault();
  }
 
+ // Sets the data to transfer on drag (https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer)
+ function dragPlayer(ev) {
+   ev.dataTransfer.setData("text/plain", ev.target.textContent)
+}
 
-// Drop the player onto the shirt
+// Transfer player data from list to shirt
 function dropPlayer(ev) {
    ev.preventDefault();
    let playerData = ev.dataTransfer.getData("text");
+   playerData = playerData.replace(/[0-9]/g, ''); //strip out the number from the string
    let playerLabel = ev.path[2].childNodes[3]
    playerLabel.textContent = playerData
  }
-
-// Listen for click events on the player label
-//let playerLabels = document.querySelectorAll('.pitch__player-label')
-//for (let i = 0; i < playerLabels.length; i++ ) {
- //  playerLabels[i].addEventListener('click', function(){
-   //   playerLabels[i].textContent = i + "John"
-     // console.log(i)
-  // })
-//}
-
