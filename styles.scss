@@ -85,6 +85,10 @@ $col-controls: #ffebd5;
 }
 .pitch {
    position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   justify-content: center;
    .pitch__img {
       position: absolute;
       width: 100%;
@@ -95,7 +99,9 @@ $col-controls: #ffebd5;
       position: relative;
       display: grid;
       height: 100%;
-      gap: 50px;
+      max-height: 700px;
+      gap: 80px;
+      margin-left: 80px;
    }
 } 
 .pitch__player {

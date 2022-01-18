@@ -98,6 +98,19 @@ img {
 
 .pitch {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .pitch .pitch__img {
@@ -113,7 +126,9 @@ img {
   display: -ms-grid;
   display: grid;
   height: 100%;
-  gap: 50px;
+  max-height: 700px;
+  gap: 80px;
+  margin-left: 80px;
 }
 
 .pitch__player {
