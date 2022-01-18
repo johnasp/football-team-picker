@@ -137,7 +137,7 @@ img {
 }
 
 .pitch__player .pitch__player-wrapper img {
-  width: 180px;
+  width: 100px;
 }
 
 .pitch__player .pitch__player-wrapper span {
@@ -155,12 +155,16 @@ img {
 }
 
 .pitch__player .pitch__player-label {
-  background: #ffebd5;
   color: black;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 0.3em 0.6em;
+  background: #fff2e4;
+  color: #000;
   margin: 0;
 }
 

@@ -106,7 +106,7 @@ $col-controls: #ffebd5;
    .pitch__player-wrapper {
       position: relative;
       img {
-         width: 180px;
+         width: 100px;
       }
       span {
          position: absolute;
@@ -119,12 +119,14 @@ $col-controls: #ffebd5;
       }
    }
    .pitch__player-label {
-      background: $col-controls;
-      color: black;
+      color: black;    
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 1.6rem;
+      display: flex;
       padding: 0.3em 0.6em;
+      background: lighten($col-controls,3%);
+      color: #000;
       margin: 0;
    }
    &.unpicked {
