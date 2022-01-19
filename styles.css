@@ -57,7 +57,9 @@ img {
 }
 
 .controls label {
-  background: #ffd3a2;
+  background: #ff5c00;
+  color: white;
+  font-weight: bold;
   padding: 0.5em;
   font-size: 2rem;
 }
@@ -134,8 +136,6 @@ img {
   height: 100vh;
   width: 100%;
   max-width: 1820px;
-  gap: 40px;
-  border: 5px solid red;
 }
 
 .pitch__player {

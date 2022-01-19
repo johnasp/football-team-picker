@@ -32,6 +32,7 @@ img {
 $ctr-pad: 0.5em;
 $col-primary: #ffebd5;
 $col-black: #1f1f1f;
+$col-tangerine: #ff5c00;
 .controls {
    overflow: auto;
    background: lighten($col-primary,5%);
@@ -51,7 +52,9 @@ $col-black: #1f1f1f;
       display: block;
    }
    label {
-      background: darken($col-primary,10%);
+      background: $col-tangerine;
+      color: white;
+      font-weight: bold;
       padding: $ctr-pad;
       font-size: 2rem;
    }
@@ -107,8 +110,6 @@ $col-black: #1f1f1f;
       height: 100vh;
       width: 100%;
       max-width: 1820px;
-      gap: 40px;
-      border: 5px solid red;
    }
 } 
 .pitch__player {
