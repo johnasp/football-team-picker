@@ -45,3 +45,7 @@ function dropPlayer(ev) {
 
 // Grab references to all items in players list and attach drag event listeners to each item
 
+const btn = document.querySelector('.bollox')
+btn.addEventListener('click', function(){
+   console.log(document.querySelector('.controls__player'))
+})
