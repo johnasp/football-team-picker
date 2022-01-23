@@ -15,20 +15,10 @@ function renderPlayers() {
 }
 renderPlayers()
 
-// ----------------------------
-// Create node list of players
-// ----------------------------
-//const playerItems = document.querySelectorAll('.controls__players')
-//playerItems.forEach(item => {
-  // item.addEventListener('click', (e) => {
-    //  console.log(e.path[0].textContent)
-   //})
-//})
-
 // ---------------------
-// Drag and drop player 
+// Drag and drop  
 // ---------------------
-
+/* 
 //overrides default behviour of the dragEvent not dropable
 function allowPlayerDrop(ev) { 
    ev.preventDefault();
@@ -46,4 +36,12 @@ function dropPlayer(ev) {
    playerData = playerData.replace(/[0-9]/g, ''); //strip out the number from the string
    let playerLabel = ev.path[2].childNodes[3]
    playerLabel.textContent = playerData
- }
+ } 
+ */
+
+ // ---------------------
+// Drag and drop 2.0 
+// ---------------------
+
+// Grab references to all items in players list and attach drag event listeners to each item
+
