@@ -12,40 +12,37 @@ function renderPlayers() {
             const shirtNumber = data.players[i].shirtNumber
             const playerName = data.players[i].name
             playersEl.innerHTML += 
-               `
-               <p class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
+               `<p class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
                   <span class="squad-number">${shirtNumber}</span>
                   <span class="squad-name"> ${playerName}</span>
-               </p>
-               `
+               </p>`
          }
       })    
 }
 renderPlayers()
 
 
-
-
-function delay() {
-   const singlePlayer = document.querySelector('.controls__player')
-   console.log(singlePlayer.innerHTML + ' works')
+let playerz = null
+function addDragListeners() {
+   const singlePlayer = document.querySelectorAll('.controls__player')
+   for (i = 0; i < singlePlayer.length; i++) {
+      let playerz = (singlePlayer[i])
+      playerz.addEventListener('dragstart', function(){
+         console.log(playerz.innerHTML)
+      })
+      playerz.addEventListener('dragend', function(){
+         //alert(playerz.innerHTML)
+         console.log('drag has ended')
+      })
+   }
 }
 
-setTimeout(delay, 1000)
-
-
-
-
-
+setTimeout(addDragListeners, 500)
 
 
  // ---------------------
 // Drag and drop 2.0 
 // ---------------------
-
-
-
-
 
 const btn = document.querySelector('.bollox')
 btn.addEventListener('click', function(){
