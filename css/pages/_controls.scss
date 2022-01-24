@@ -1,0 +1,59 @@
+
+.controls {
+   overflow: auto;
+   background: lighten($col-primary,5%);
+   .controls__header {
+      text-align: right;
+      button {
+         font-size: 2rem;
+         padding: .4em;
+         border: none;
+         background: none;
+         i {
+            margin-left: .3em;
+         }
+      }
+   }
+   label, select, textarea {
+      display: block;
+   }
+   label {
+      background: $col-tangerine;
+      color: white;
+      font-weight: bold;
+      padding: $ctr-pad;
+      font-size: 2rem;
+   }
+   select {
+      font-size: 1.6rem;
+      padding: .6em;
+      margin: .6em;
+   }
+   section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
+}
+.controls__player {
+      display: block;
+      padding: .8em;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 2rem;
+      padding: 0.5em 1em;
+      margin: 0;
+      span {
+         font-weight: normal;
+         min-width: 1.7em;
+         display: inline-block;
+         text-align: center;
+      }
+      &:hover {
+         border: 3px dashed darken($col-primary,25%);
+         cursor: pointer;
+      }
+      &:nth-child(odd) {
+         background: lighten($col-primary,1%);
+      }
+
+}

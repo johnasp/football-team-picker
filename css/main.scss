@@ -30,11 +30,14 @@
 
 // 6. Page-specific styles
 @import
-  'pages/home';
-  //'pages/442',
+  'pages/home',
+  'pages/controls',
+  'pages/pitch',
+  'pages/442';
   //'pages/433',
   //'pages/4231',
   //'pages/532',
-// 7. Themes
+
+  // 7. Themes
 @import
   'themes/default';

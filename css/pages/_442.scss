@@ -1,0 +1,45 @@
+// 442 //
+.formation-442 {
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-areas: 
+      "g d2 m6 ."
+      "g d3 m7 f9"
+      "g d4 m8 f10"
+      "g d5 m11 .";
+   .player-1 {
+      grid-area: g;
+   }
+   //Defenders
+   .player-2 {
+      grid-area: d2;
+   }
+   .player-3 {
+      grid-area: d3;
+   }
+   .player-4 {
+      grid-area: d4;
+   }
+   .player-5 {
+      grid-area: d5;
+   }
+   //Midfield
+   .player-6 {
+      grid-area: m6;
+   }
+   .player-7 {
+      grid-area: m7;
+   }
+   .player-8 {
+      grid-area: m8;
+   }
+   .player-11 {
+      grid-area: m11;
+   }
+   //Forwards
+   .player-9 {
+      grid-area: f9;
+   }
+   .player-10 {
+      grid-area: f10;
+   }
+}

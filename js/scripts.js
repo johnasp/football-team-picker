@@ -1,6 +1,8 @@
 // ---------------------
 // Bring in the players JSON // https://www.youtube.com/watch?v=C3dfjyft_m4 
 // ---------------------
+let playerList1 
+
 function renderPlayers() {
    const playersEl = document.querySelector('.controls__players')
    fetch('players.json')
@@ -9,11 +11,50 @@ function renderPlayers() {
          for (let i = 0; i < data.players.length; i++ ) {
             const shirtNumber = data.players[i].shirtNumber
             const playerName = data.players[i].name
-            playersEl.innerHTML += `<p class="controls__player" id="shirt-${shirtNumber}" draggable="true" ondragstart="dragPlayer(event)"><span>${shirtNumber}</span> ${playerName}</p>`
+            playersEl.innerHTML += 
+               `
+               <p class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
+                  <span class="squad-number">${shirtNumber}</span>
+                  <span class="squad-name"> ${playerName}</span>
+               </p>
+               `
          }
       })    
 }
 renderPlayers()
+
+
+
+
+function delay() {
+   const singlePlayer = document.querySelector('.controls__player')
+   console.log(singlePlayer.innerHTML + ' works')
+}
+
+setTimeout(delay, 1000)
+
+
+
+
+
+
+
+ // ---------------------
+// Drag and drop 2.0 
+// ---------------------
+
+
+
+
+
+const btn = document.querySelector('.bollox')
+btn.addEventListener('click', function(){
+   const playerList = document.querySelectorAll('.controls__player')
+   for ( i=0; i < playerList.length; i++ ) { 
+      console.log( playerList[i])
+   }
+})
+
 
 // ---------------------
 // Drag and drop  
@@ -39,13 +80,3 @@ function dropPlayer(ev) {
  } 
  */
 
- // ---------------------
-// Drag and drop 2.0 
-// ---------------------
-
-// Grab references to all items in players list and attach drag event listeners to each item
-
-const btn = document.querySelector('.bollox')
-btn.addEventListener('click', function(){
-   console.log(document.querySelector('.controls__player'))
-})

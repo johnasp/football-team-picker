@@ -16,3 +16,32 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+html {
+  font-size: 10px;
+}
+html, body {
+  height: 100vh;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: 100vh;
+}
