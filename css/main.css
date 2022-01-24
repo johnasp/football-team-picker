@@ -495,6 +495,10 @@ img {
   background: #ffedda;
 }
 
+.hold {
+  background: red !important;
+}
+
 .pitch {
   position: relative;
   display: -webkit-box;

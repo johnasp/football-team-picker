@@ -55,5 +55,7 @@
       &:nth-child(odd) {
          background: lighten($col-primary,1%);
       }
-
+}
+.hold {
+   background: red!important;
 }

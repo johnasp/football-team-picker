@@ -1,8 +1,7 @@
 // ---------------------
-// Bring in the players JSON // https://www.youtube.com/watch?v=C3dfjyft_m4 
+// Bring in the players JSON 
+// https://www.youtube.com/watch?v=C3dfjyft_m4 
 // ---------------------
-let playerList1 
-
 function renderPlayers() {
    const playersEl = document.querySelector('.controls__players')
    fetch('players.json')
@@ -21,37 +20,36 @@ function renderPlayers() {
 }
 renderPlayers()
 
+// ---------------------
+// Drag and drop 2.0 
+// ---------------------
 
-let playerz = null
+// Drag listeners
+
 function addDragListeners() {
    const singlePlayer = document.querySelectorAll('.controls__player')
    for (i = 0; i < singlePlayer.length; i++) {
       let playerz = (singlePlayer[i])
       playerz.addEventListener('dragstart', function(){
-         console.log(playerz.innerHTML)
+         this.classList.add('hold')
+         console.log(this.innerHTML)
       })
       playerz.addEventListener('dragend', function(){
-         //alert(playerz.innerHTML)
-         console.log('drag has ended')
+         this.classList.remove('hold')
       })
    }
 }
+setTimeout(addDragListeners, 500) //Needed to allow DOM to paint list or will return null
 
-setTimeout(addDragListeners, 500)
+// Loop through pitch players and attach drag/drop events
+const pitchPlayers = document.querySelectorAll('.pitch__player-shirt')
+for (const pitchPlayer of pitchPlayers ) {
+   pitchPlayer.addEventListener('dragover', dragOver)
+}
 
-
- // ---------------------
-// Drag and drop 2.0 
-// ---------------------
-
-const btn = document.querySelector('.bollox')
-btn.addEventListener('click', function(){
-   const playerList = document.querySelectorAll('.controls__player')
-   for ( i=0; i < playerList.length; i++ ) { 
-      console.log( playerList[i])
-   }
-})
-
+function dragOver() {
+   console.log('im being dragged over')
+}
 
 // ---------------------
 // Drag and drop  
