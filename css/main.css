@@ -499,6 +499,15 @@ img {
   background: red !important;
 }
 
+.invisible {
+  display: none !important;
+}
+
+.hovered {
+  border: 3px dashed white;
+  cursor: pointer;
+}
+
 .pitch {
   position: relative;
   display: -webkit-box;
@@ -549,6 +558,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 8px;
+  cursor: pointer;
 }
 
 .pitch__player .pitch__player-shirt {

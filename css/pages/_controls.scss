@@ -59,3 +59,10 @@
 .hold {
    background: red!important;
 }
+.invisible {
+   display: none!important;
+}
+.hovered {
+   border: 3px dashed white;
+   cursor: pointer;
+ }

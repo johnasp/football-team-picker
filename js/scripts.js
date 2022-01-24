@@ -30,26 +30,46 @@ function addDragListeners() {
    const singlePlayer = document.querySelectorAll('.controls__player')
    for (i = 0; i < singlePlayer.length; i++) {
       let playerz = (singlePlayer[i])
-      playerz.addEventListener('dragstart', function(){
+      playerz.addEventListener('dragstart', function() {
          this.classList.add('hold')
          console.log(this.innerHTML)
       })
-      playerz.addEventListener('dragend', function(){
+      playerz.addEventListener('dragend', function() {
          this.classList.remove('hold')
       })
    }
 }
 setTimeout(addDragListeners, 500) //Needed to allow DOM to paint list or will return null
 
-// Loop through pitch players and attach drag/drop events
+// Loop through pitch players and attch drag listeners to pitch player
 const pitchPlayers = document.querySelectorAll('.pitch__player-shirt')
 for (const pitchPlayer of pitchPlayers ) {
    pitchPlayer.addEventListener('dragover', dragOver)
+   pitchPlayer.addEventListener('dragenter', dragEnter)
+   pitchPlayer.addEventListener('dragleave', dragLeave)
+   pitchPlayer.addEventListener('dragdrop', dragDrop)
 }
 
-function dragOver() {
-   console.log('im being dragged over')
+// Drag functions
+function dragOver(e) {
+   e.preventDefault()
+   console.log('over')
 }
+
+function dragEnter() {
+  console.log('enter')
+}
+
+function dragLeave() {
+   console.log('leave')
+}
+
+function dragDrop() {
+   console.log('drop');
+   alert('dropped')
+
+}
+
 
 // ---------------------
 // Drag and drop  
