@@ -563,6 +563,7 @@ img {
 
 .pitch__player .pitch__player-shirt {
   position: relative;
+  border: 4px dashed yellow;
 }
 
 .pitch__player .pitch__player-shirt img {

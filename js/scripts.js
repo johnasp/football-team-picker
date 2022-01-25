@@ -47,7 +47,7 @@ for (const pitchPlayer of pitchPlayers ) {
    pitchPlayer.addEventListener('dragover', dragOver)
    pitchPlayer.addEventListener('dragenter', dragEnter)
    pitchPlayer.addEventListener('dragleave', dragLeave)
-   pitchPlayer.addEventListener('dragdrop', dragDrop)
+   pitchPlayer.addEventListener('drop', dragDrop)
 }
 
 // Drag functions
@@ -65,7 +65,7 @@ function dragLeave() {
 }
 
 function dragDrop() {
-   console.log('drop');
+   //console.log(e);
    alert('dropped')
 
 }
