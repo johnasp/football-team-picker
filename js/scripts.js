@@ -1,47 +1,9 @@
 // ---------------------
-// Bring in the players JSON 
+// Drag and drop 
+// ---------------------
 // https://www.youtube.com/watch?v=C3dfjyft_m4 
-// ---------------------
-function renderPlayers() {
-   const playersEl = document.querySelector('.controls__players')
-   fetch('players.json')
-      .then(response => response.json()) // converts JSON from string to array
-      .then(data => {
-         for (let i = 0; i < data.players.length; i++ ) {
-            const shirtNumber = data.players[i].shirtNumber
-            const playerName = data.players[i].name
-            playersEl.innerHTML += 
-               `<p class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
-                  <span class="squad-number">${shirtNumber}</span>
-                  <span class="squad-name"> ${playerName}</span>
-               </p>`
-         }
-      })    
-}
-renderPlayers()
 
-// ---------------------
-// Drag and drop 2.0 
-// ---------------------
-
-// Drag listeners
-
-function addDragListeners() {
-   const singlePlayer = document.querySelectorAll('.controls__player')
-   for (i = 0; i < singlePlayer.length; i++) {
-      let playerz = (singlePlayer[i])
-      playerz.addEventListener('dragstart', function() {
-         this.classList.add('hold')
-         console.log(this.innerHTML)
-      })
-      playerz.addEventListener('dragend', function() {
-         this.classList.remove('hold')
-      })
-   }
-}
-setTimeout(addDragListeners, 500) //Needed to allow DOM to paint list or will return null
-
-// Loop through pitch players and attch drag listeners to pitch player
+// ATTACH DRAG EVENT LISTENERS TO PITCH PLAYERS
 const pitchPlayers = document.querySelectorAll('.pitch__player-shirt')
 for (const pitchPlayer of pitchPlayers ) {
    pitchPlayer.addEventListener('dragover', dragOver)
@@ -50,25 +12,52 @@ for (const pitchPlayer of pitchPlayers ) {
    pitchPlayer.addEventListener('drop', dragDrop)
 }
 
-// Drag functions
+// RENDER THE PLAYERS LIST FROM THE JSON
+function renderPlayers() {
+   const playerEl = document.querySelector('.controls__players')
+   fetch('players.json')
+      .then(response => response.json()) // converts JSON from string to array
+      .then(data => { // Stuff array with the player data
+         for (let i = 0; i < data.players.length; i++ ) {
+            const shirtNumber = data.players[i].shirtNumber
+            const playerName = data.players[i].name
+            playerEl.innerHTML += 
+               `<p class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
+                  <span class="squad-number">${shirtNumber}</span>
+                  <span class="squad-name"> ${playerName}</span>
+               </p>`
+         }
+      })  
+      .then(function(){
+         const players = document.querySelectorAll('.controls__player')
+         for (i = 0; i < players.length; i++) {
+            players[i].addEventListener('click', function(){
+               console.log(this.innerHTML)
+            })
+         }
+      })  
+}
+renderPlayers()
+
+function dragDrop() {
+   this.append('XXXXXX')
+   console.log('drooped on the shirt')
+}
+
 function dragOver(e) {
    e.preventDefault()
    console.log('over')
 }
 
-function dragEnter() {
-  console.log('enter')
+function dragEnter(e) {
+   e.preventDefault()
+   console.log('enter')
 }
 
 function dragLeave() {
    console.log('leave')
 }
 
-function dragDrop() {
-   //console.log(e);
-   alert('dropped')
-
-}
 
 
 // ---------------------

@@ -607,6 +607,10 @@ img {
   display: none;
 }
 
+.hovered {
+  border: 4px solid red !important;
+}
+
 .formation-442 {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
