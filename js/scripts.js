@@ -31,17 +31,14 @@ function renderPlayers() {
       .then(function(){
          const players = document.querySelectorAll('.controls__player')
          for (i = 0; i < players.length; i++) {
-            players[i].addEventListener('click', function(){
-               console.log(this.innerHTML)
-            })
+            players[i].addEventListener('drag', dragDrop)
          }
       })  
 }
-renderPlayers()
+renderPlayers() 
 
 function dragDrop() {
-   this.append('XXXXXX')
-   console.log('drooped on the shirt')
+   console.log(this.innerHTML)
 }
 
 function dragOver(e) {
