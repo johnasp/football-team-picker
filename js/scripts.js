@@ -6,53 +6,61 @@
 // ATTACH DRAG EVENT LISTENERS TO PITCH PLAYERS
 const pitchPlayers = document.querySelectorAll('.pitch__player-shirt')
 for (const pitchPlayer of pitchPlayers ) {
-   pitchPlayer.addEventListener('dragover', dragOver)
-   pitchPlayer.addEventListener('dragenter', dragEnter)
-   pitchPlayer.addEventListener('dragleave', dragLeave)
-   pitchPlayer.addEventListener('drop', dragDrop)
+   pitchPlayer.addEventListener('dragover', dragOverHandler)
+   pitchPlayer.addEventListener('dragenter', dragEnterHandler)
+   pitchPlayer.addEventListener('dragleave', dragLeaveHandler)
+   pitchPlayer.addEventListener('drop', dropHandler)
 }
 
 // RENDER THE PLAYERS LIST FROM THE JSON
-function renderPlayers() {
-   const playerEl = document.querySelector('.controls__players')
-   fetch('players.json')
-      .then(response => response.json()) // converts JSON from string to array
-      .then(data => { // Stuff array with the player data
-         for (let i = 0; i < data.players.length; i++ ) {
-            const shirtNumber = data.players[i].shirtNumber
-            const playerName = data.players[i].name
-            playerEl.innerHTML += 
-               `<p class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
-                  <span class="squad-number">${shirtNumber}</span>
-                  <span class="squad-name"> ${playerName}</span>
-               </p>`
-         }
-      })  
-      .then(function(){
-         const players = document.querySelectorAll('.controls__player')
-         for (i = 0; i < players.length; i++) {
-            players[i].addEventListener('drag', dragDrop)
-         }
-      })  
-}
-renderPlayers() 
 
-function dragDrop() {
-   console.log(this.innerHTML)
+const playerEl = document.querySelector('.controls__players')
+fetch('players.json')
+   .then(response => response.json()) // converts JSON from string to array
+   .then(data => { // Print out player names
+      for (let i = 0; i < data.players.length; i++ ) {
+         const shirtNumber = data.players[i].shirtNumber
+         const playerName = data.players[i].name
+         playerEl.innerHTML += 
+            `<p class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
+               <span class="squad-number">${shirtNumber}</span>
+               <span class="squad-name"> ${playerName}</span>
+            </p>`
+      }
+   })  
+   .then(function(){   // List player handlers
+      const players = document.querySelectorAll('.controls__player')
+      for (i = 0; i < players.length; i++) {
+         players[i].addEventListener('dragstart', dragStartHandler)
+      }
+   })  
+  
+function dragStartHandler(e){
+   console.log(this)
+   e.dataTransfer.setData('text/html', this.innerHTML)
+   
 }
 
-function dragOver(e) {
+function dropHandler(e) {
+   e.stopPropagation(); // stops the browser from redirecting.
+   console.log('DROPPED') 
+   const john = e.dataTransfer.getData('text/html')
+   console.log(john)
+   console.log(this)
+}
+
+function dragOverHandler(e) {
    e.preventDefault()
-   console.log('over')
+   //console.log('over')
 }
 
-function dragEnter(e) {
+function dragEnterHandler(e) {
    e.preventDefault()
-   console.log('enter')
+   //console.log('enter')
 }
 
-function dragLeave() {
-   console.log('leave')
+function dragLeaveHandler() {
+   //console.log('leave')
 }
 
 
@@ -66,7 +74,7 @@ function allowPlayerDrop(ev) {
    ev.preventDefault();
  }
 
- // Sets the data to transfer on drag (https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer)
+ Sets the data to transfer on drag (https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer)
  function dragPlayer(ev) {
    ev.dataTransfer.setData("text/plain", ev.target.textContent)
 }
