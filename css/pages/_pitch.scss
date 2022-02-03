@@ -22,13 +22,16 @@
 } 
 .pitch__player {
    align-self: center;
+   justify-self: center;
+   position: relative;
+  // background-image: url(../images/pool-shirt-grey.svg);
    &.over {
       border: 4px dashed yellow;
    }
    img {
       width: 150px;
    }
-   p {
+   .squad-name {
       color: black;    
       text-transform: uppercase;
       font-weight: bold;
@@ -37,5 +40,18 @@
       color: $col-black;
       margin: 0;
       text-align: center;
+   }
+   .squad-number {
+      visibility: hidden;
+      @include absCentre(); 
+      color: white;
+      font-size: 4rem;
+      font-weight: bold;
+      margin: 0;
+   }
+   &.active {
+      .squad-number {
+         visibility: visible;
+      }
    }
 }

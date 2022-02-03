@@ -23,7 +23,7 @@ fetch('players.json')
          const playerName = data.players[i].name
          playerEl.innerHTML += 
             `<div class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
-               <img src="images/pool-shirt.svg" alt="Blackpool FC shirt, grey">
+               <img src="images/pool-shirt.svg" alt="Blackpool FC shirt">
                <p class="squad-number">${shirtNumber}</p>
                <p class="squad-name"> ${playerName}</p>
             </div>`
@@ -44,8 +44,7 @@ function dropHandler(e) {
    e.preventDefault()
    const data = e.dataTransfer.getData('text')
    this.classList.remove('over')
-   console.log('dropped')
-   console.log(data)
+   this.classList.add('active')
    this.innerHTML = data
 
 }

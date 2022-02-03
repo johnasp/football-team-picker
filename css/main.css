@@ -386,8 +386,8 @@ img {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px 1fr;
-      grid-template-columns: 300px 1fr;
+  -ms-grid-columns: 250px 1fr;
+      grid-template-columns: 250px 1fr;
   height: 100vh;
 }
 
@@ -462,32 +462,24 @@ img {
   margin: .6em;
 }
 
-.controls section {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-}
-
 .controls__player {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: .8em;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 2rem;
-  padding: 0.5em 1em;
+  padding: 0.3em 1em;
   margin: 0;
 }
 
 .controls__player img {
-  width: 20px;
+  display: none;
 }
 
-.controls__player span {
-  font-weight: normal;
-  min-width: 1.7em;
-  display: inline-block;
-  text-align: center;
+.controls__player p {
+  margin-right: 12px;
 }
 
 .controls__player:hover {
@@ -497,19 +489,6 @@ img {
 
 .controls__player:nth-child(odd) {
   background: #ffedda;
-}
-
-.hold {
-  background: red !important;
-}
-
-.invisible {
-  display: none !important;
-}
-
-.hovered {
-  border: 3px dashed white;
-  cursor: pointer;
 }
 
 .pitch {
@@ -552,6 +531,9 @@ img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  position: relative;
 }
 
 .pitch__player.over {
@@ -562,7 +544,7 @@ img {
   width: 150px;
 }
 
-.pitch__player p {
+.pitch__player .squad-name {
   color: black;
   text-transform: uppercase;
   font-weight: bold;
@@ -571,6 +553,23 @@ img {
   color: #1f1f1f;
   margin: 0;
   text-align: center;
+}
+
+.pitch__player .squad-number {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.pitch__player.active .squad-number {
+  visibility: visible;
 }
 
 .formation-442 {
