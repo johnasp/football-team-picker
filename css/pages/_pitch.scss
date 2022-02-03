@@ -17,54 +17,25 @@
       height: 100vh;
       width: 100%;
       max-width: 1820px;
+      gap: 2em;
    }
 } 
 .pitch__player {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   font-size: 8px;
-   cursor: pointer;
-   .pitch__player-shirt {
-      position: relative;
+   align-self: center;
+   &.over {
       border: 4px dashed yellow;
-      img {
-         width: 14em;
-      }
-      span {
-         position: absolute;
-         @include centerer;
-         color: white;
-         font-size: 4em;
-         font-weight: 600;
-         display: block;
-         text-align: center;
-      }
    }
-   .pitch__player-label {
+   img {
+      width: 150px;
+   }
+   p {
       color: black;    
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 2.4em;
-      display: flex;
-      padding: 0.3em 0.6em;
+      font-size: 2em;
       background: lighten($col-primary,3%);
       color: $col-black;
       margin: 0;
-      border-left: .2em solid $col-black;
+      text-align: center;
    }
-   &.unpicked {
-      .pitch__player-shirt, .pitch__player-number, .pitch__player-label--picked {
-         display: none;
-      }
-   }
-   &.picked {
-      .pitch__player-circle, .pitch__player-character, .pitch__player-label--unpicked {
-         display: none;
-      }
-   }
-}
-.hovered {
-   border: 4px solid red!important;
 }
