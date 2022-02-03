@@ -466,11 +466,13 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: .8em;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 2rem;
-  padding: 0.3em 1em;
+  font-size: 1.8rem;
+  padding: 0.6em 1em;
   margin: 0;
 }
 
@@ -478,8 +480,20 @@ img {
   display: none;
 }
 
+.controls__player .squad-number {
+  margin-right: 0.4em;
+}
+
 .controls__player p {
-  margin-right: 12px;
+  margin: 0;
+}
+
+.controls__player .squad-position {
+  font-size: 1.2rem;
+  margin-top: 0.4em;
+  font-weight: normal;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .controls__player:hover {

@@ -21,11 +21,13 @@ fetch('players.json')
       for (let i = 0; i < data.players.length; i++ ) {
          const shirtNumber = data.players[i].shirtNumber
          const playerName = data.players[i].name
+         const position = data.players[i].position
          playerEl.innerHTML += 
             `<div class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
                <img src="images/pool-shirt.svg" alt="Blackpool FC shirt">
                <p class="squad-number">${shirtNumber}</p>
                <p class="squad-name"> ${playerName}</p>
+               <p class="squad-position"> ${position}</p>
             </div>`
       }
    })  
@@ -43,10 +45,11 @@ function dragStartHandler(e){
 function dropHandler(e) {
    e.preventDefault()
    const data = e.dataTransfer.getData('text')
+   // if the players position is a goalie then add the goalie shirt
    this.classList.remove('over')
    this.classList.add('active')
    this.innerHTML = data
-
+   //
 }
 
 function dragOverHandler(e) {

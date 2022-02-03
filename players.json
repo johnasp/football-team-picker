@@ -4,123 +4,128 @@
   "players": [
     {
       "name": "Maxwell",
-      "shirtNumber": 1
+      "shirtNumber": 1,
+      "position": "Goalkeeper"
     },
     {
       "name": "Connolly",
-      "shirtNumber": 2
+      "shirtNumber": 2,
+      "position": "Defender"
     },
     {
       "name": "Husband",
-      "shirtNumber": 3
+      "shirtNumber": 3,
+      "position": "Defender"
     },
     {
       "name": "Gabriel",
-      "shirtNumber": 4
+      "shirtNumber": 4,
+      "position": "Defender"
     },
     {
       "name": "James",
-      "shirtNumber": 5
+      "shirtNumber": 5,
+      "position": "Defender"
     },
     {
       "name": "Stewart",
-      "shirtNumber": 6
+      "shirtNumber": 6,
+      "position": "Midfield"
     },
     {
       "name": "Dale",
-      "shirtNumber": 7
+      "shirtNumber": 7,
+      "position": "Midfield"
     },
     {
       "name": "Wintle",
-      "shirtNumber": 8
+      "shirtNumber": 8,
+      "position": "Midfield"
     },
     {
       "name": "Yates",
-      "shirtNumber": 9
+      "shirtNumber": 9,
+      "position": "Forward"
     },
     {
       "name": "Anderson",
-      "shirtNumber": 10
+      "shirtNumber": 10,
+      "position": "Forward"
     },
     {
       "name": "Bowler",
-      "shirtNumber": 11
+      "shirtNumber": 11,
+      "position": "Forward"
     },
     {
       "name": "Dougall",
-      "shirtNumber": 12
+      "shirtNumber": 12,
+      "position": "Midfield"
     },
     {
       "name": "Moore",
-      "shirtNumber": 13
+      "shirtNumber": 13,
+      "position": "Goalkeeper"
     },
     {
       "name": "Madine",
-      "shirtNumber": 14
-    },
-    {
-      "name": "Mitchell",
-      "shirtNumber": 15
+      "shirtNumber": 14,
+      "position": "Forward"
     },
     {
       "name": "Carey",
-      "shirtNumber": 16
+      "shirtNumber": 16,
+      "position": "Midfield"
     },
     {
       "name": "Virtue",
-      "shirtNumber": 17
+      "shirtNumber": 17,
+      "position": "Midfield"
     },
     {
       "name": "Ward",
-      "shirtNumber": 18
+      "shirtNumber": 18,
+      "position": "Midfield"
     },
     {
       "name": "Lavery",
-      "shirtNumber": 19
+      "shirtNumber": 19,
+      "position": "Forward"
     },
     {
       "name": "Casey",
-      "shirtNumber": 20
+      "shirtNumber": 20,
+      "position": "Midfield"
     },
     {
       "name": "Ekpiteta",
-      "shirtNumber": 21
+      "shirtNumber": 21,
+      "position": "Defender"
     },
     {
       "name": "Hamilton",
-      "shirtNumber": 22
-    },
-    {
-      "name": "Grétarsson",
-      "shirtNumber": 23
-    },
-    {
-      "name": "Nuttall",
-      "shirtNumber": 24
+      "shirtNumber": 22,
+      "position": "Forward"
     },
     {
       "name": "Keogh",
-      "shirtNumber": 26
-    },
-    {
-      "name": "Sarkic",
-      "shirtNumber": 27
-    },
-    {
-      "name": "John-Jules",
-      "shirtNumber": 28
+      "shirtNumber": 26,
+      "position": "Defender"
     },
     {
       "name": "Garbutt",
-      "shirtNumber": 29
+      "shirtNumber": 29,
+      "position": "Defender"
     },
     {
       "name": "Grimshaw",
-      "shirtNumber": 32
+      "shirtNumber": 32,
+      "position": "Goalkeeper"
     },
     {
       "name": "Sterling",
-      "shirtNumber": 35
+      "shirtNumber": 35,
+      "position": "Defender"
     }
 
   ]

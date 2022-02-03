@@ -32,18 +32,29 @@
 }
 .controls__player {
       display: flex;
+      flex-wrap: wrap;
       padding: .8em;
       font-weight: bold;
       text-transform: uppercase;
-      font-size: 2rem;
-      padding: 0.3em 1em;
+      font-size: 1.8rem;
+      padding: 0.6em 1em;
       margin: 0;
       img {
          display: none;
       }
-      p {
-         margin-right: 12px;
+      .squad-number {
+         margin-right: 0.4em;
       }
+      p {
+         margin: 0;
+      }
+      .squad-position {
+         font-size: 1.2rem;
+         margin-top: 0.4em;
+         font-weight: normal;
+         flex-basis: 100%;
+      }
+
       &:hover {
          border: 3px dashed darken($col-primary,25%);
          cursor: pointer;
