@@ -1,7 +1,6 @@
 // ---------------------
 // Drag and drop 
 // ---------------------
-// https://www.youtube.com/watch?v=C3dfjyft_m4 
 
 // Attach drag/drop listeners to pitch players
 const pitchPlayers = document.querySelectorAll('.pitch__player')
@@ -49,46 +48,17 @@ function dropHandler(e) {
    this.classList.remove('over')
    this.classList.add('active')
    this.innerHTML = data
-   //
 }
 
 function dragOverHandler(e) {
    e.preventDefault()
    this.classList.add('over')
 }
+
 function dragEnterHandler(e) {
    e.preventDefault()
-   //this.classList.add('over')
 }
+
 function dragLeaveHandler() {
    this.classList.remove('over')
 }
-
-
-
-
-
-// ---------------------
-// Drag and drop  
-// ---------------------
-/* 
-//overrides default behviour of the dragEvent not dropable
-function allowPlayerDrop(ev) { 
-   ev.preventDefault();
- }
-
- Sets the data to transfer on drag (https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer)
- function dragPlayer(ev) {
-   ev.dataTransfer.setData("text/plain", ev.target.textContent)
-}
-
-// Transfer player data from list to shirt
-function dropPlayer(ev) {
-   ev.preventDefault();
-   let playerData = ev.dataTransfer.getData("text");
-   playerData = playerData.replace(/[0-9]/g, ''); //strip out the number from the string
-   let playerLabel = ev.path[2].childNodes[3]
-   playerLabel.textContent = playerData
- } 
- */
-

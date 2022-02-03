@@ -29,25 +29,28 @@
       border: 4px dashed yellow;
    }
    img {
-      width: 150px;
+      width: 130px;
    }
-   .squad-name {
-      color: black;    
-      text-transform: uppercase;
+   .squad-name { 
+      @include absCentreHorizontal(); 
       font-weight: bold;
-      font-size: 2em;
-      background: lighten($col-primary,3%);
+      font-size: 2.4rem;
+      padding: 0.1em 0.3em;
+      background: white;
       color: $col-black;
       margin: 0;
       text-align: center;
    }
    .squad-number {
-      visibility: hidden;
-      @include absCentre(); 
+      @include absCentre();
+      visibility: hidden; 
       color: white;
-      font-size: 4rem;
+      font-size: 3.2rem;
       font-weight: bold;
       margin: 0;
+   }
+   .squad-position {
+      display: none;
    }
    &.active {
       .squad-number {

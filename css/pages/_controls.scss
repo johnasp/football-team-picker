@@ -1,34 +1,22 @@
 .controls {
    overflow: auto;
-   background: lighten($col-primary,5%);
-   .controls__header {
-      text-align: right;
-      button {
-         font-size: 2rem;
-         padding: .4em;
-         border: none;
-         background: none;
-         i {
-            margin-left: .3em;
-         }
+   background: adjust-hue( $primary, 5% );
+   header {
+      font-size: 1.8rem;
+      padding: 0.6em;
+      label {
+         color: white;
+         font-weight: normal;
+         font-size: inherit;
+      }
+      select {
+         width: 100%;
+         padding: 0.2em;
+      }
+      div:first-child {
+         margin-bottom: 0.6em;
       }
    }
-   label, select, textarea {
-      display: block;
-   }
-   label {
-      background: $col-tangerine;
-      color: white;
-      font-weight: bold;
-      padding: $ctr-pad;
-      font-size: 2rem;
-   }
-   select {
-      font-size: 1.6rem;
-      padding: .6em;
-      margin: .6em;
-   }
-
 }
 .controls__player {
       display: flex;
@@ -39,6 +27,7 @@
       font-size: 1.8rem;
       padding: 0.6em 1em;
       margin: 0;
+      background: $secondary;
       img {
          display: none;
       }
@@ -56,10 +45,10 @@
       }
 
       &:hover {
-         border: 3px dashed darken($col-primary,25%);
+         border: 3px dashed $primary;
          cursor: pointer;
       }
       &:nth-child(odd) {
-         background: lighten($col-primary,1%);
+         background: $tertiary;
       }
 }
