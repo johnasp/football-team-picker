@@ -589,6 +589,18 @@ img {
   display: block;
 }
 
+.pitch__player .goalie-shirt {
+  display: none;
+}
+
+.pitch__player.goalie-on .goalie-shirt {
+  display: block;
+}
+
+.pitch__player.goalie-on .grey-shirt {
+  display: none;
+}
+
 .formation-442 {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);

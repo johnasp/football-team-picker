@@ -64,4 +64,15 @@
          display: block;
       }
    }
+   .goalie-shirt {
+      display: none;
+   }
+   &.goalie-on {
+      .goalie-shirt {
+         display: block;
+      }
+      .grey-shirt {
+         display: none;
+      }
+   }
 }
