@@ -539,7 +539,8 @@ img {
 }
 
 .pitch__player.over {
-  border: 4px dashed yellow;
+  border: 4px dashed white;
+  padding: 12px;
 }
 
 .pitch__player img {
@@ -547,15 +548,18 @@ img {
 }
 
 .pitch__player .squad-name {
+  display: none;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  font-weight: bold;
-  font-size: 2.4rem;
+  font-weight: normal;
+  font-size: 2rem;
   padding: 0.1em 0.3em;
   background: white;
   color: #1f1f1f;
+  text-transform: uppercase;
+  font-weight: bold;
   margin: 0;
   text-align: center;
 }
@@ -579,6 +583,10 @@ img {
 
 .pitch__player.active .squad-number {
   visibility: visible;
+}
+
+.pitch__player.active .squad-name {
+  display: block;
 }
 
 .formation-442 {

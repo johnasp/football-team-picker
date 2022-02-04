@@ -26,18 +26,22 @@
    position: relative;
   // background-image: url(../images/pool-shirt-grey.svg);
    &.over {
-      border: 4px dashed yellow;
+      border: 4px dashed white;
+      padding: 12px;
    }
    img {
       width: 130px;
    }
    .squad-name { 
+      display: none;
       @include absCentreHorizontal(); 
-      font-weight: bold;
-      font-size: 2.4rem;
+      font-weight: normal;
+      font-size: 2rem;
       padding: 0.1em 0.3em;
       background: white;
       color: $col-black;
+      text-transform: uppercase;
+      font-weight: bold;
       margin: 0;
       text-align: center;
    }
@@ -55,6 +59,9 @@
    &.active {
       .squad-number {
          visibility: visible;
+      }
+      .squad-name {
+         display: block;
       }
    }
 }
