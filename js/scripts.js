@@ -43,17 +43,13 @@ function dragStartHandler(e){
 function dropHandler(e) {
    e.preventDefault()
    const data = e.dataTransfer.getData('text') // Get data payload
-   //convert string data to array for GK test and strip
-   const htmlString = data
+   const htmlString = data    //convert string data to array for GK test and strip
    let playerHTML = new DOMParser().parseFromString(htmlString, "text/html")
    playerHTML = playerHTML.body.children
    let playerArr = Array.from(playerHTML)
-   // Check if the player is a goalie, if yes, replace shirt with GK shirt
-   const playerPosition = 'Goalkeeper'
-
-   console.log(   typeof playerPosition)
-
-   if ( playerPosition === 'Goalkeeper') {
+   let playerPosition = playerArr[3].innerHTML
+   playerPosition = playerPosition.trim() // Removing whitespace from string which was causing if comporison test to fail
+   if ( playerPosition == 'Goalkeeper') {
       this.classList.add('goalie-on')
       playerArr.shift() 
       let strPlayer = 
@@ -65,18 +61,13 @@ function dropHandler(e) {
       }
       console.log(strPlayer)
       this.innerHTML = strPlayer
-   }  else {
+   }  
+   else {
       this.innerHTML = data
    }
    this.classList.remove('over')
    this.classList.add('active')
 }
-
-
-function keeperShirt() {
-
-}
-
 
 function dragOverHandler(e) {
    e.preventDefault()
