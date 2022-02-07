@@ -37,32 +37,46 @@ fetch('players.json')
    })  
   
 function dragStartHandler(e){
-   e.dataTransfer.setData('text', e.target.innerHTML)
+   e.dataTransfer.setData('text', e.target.innerHTML) // Set data payload to transfer
 }
 
 function dropHandler(e) {
    e.preventDefault()
-   const data = e.dataTransfer.getData('text')
-   console.log(data)
-   // Strip out shirt if its the goalie
-   const goalieCheck = 'yes'
-   if ( goalieCheck === 'yes') {
+   const data = e.dataTransfer.getData('text') // Get data payload
+   //convert string data to array for GK test and strip
+   const htmlString = data
+   let playerHTML = new DOMParser().parseFromString(htmlString, "text/html")
+   playerHTML = playerHTML.body.children
+   let playerArr = Array.from(playerHTML)
+   // Check if the player is a goalie, if yes, replace shirt with GK shirt
+   const playerPosition = 'Goalkeeper'
+
+   console.log(   typeof playerPosition)
+
+   if ( playerPosition === 'Goalkeeper') {
       this.classList.add('goalie-on')
-      const htmlString = data
-      let gk = new DOMParser().parseFromString(htmlString, "text/html")
-      htmlList = gk.body.children
-      let htmlArr = Array.from(htmlList)
-      htmlArr.shift()
-      let strPlayer = ""
-      for (let i=0; i < htmlArr.length; i++) {
-         strPlayer += htmlArr[i].outerHTML
+      playerArr.shift() 
+      let strPlayer = 
+      `
+         <img src="images/pool-shirt-gk.svg" class="goalie-shirt" alt="Blackpool FC goalkeeper shirt">
+      `
+      for (let i=0; i < playerArr.length; i++) {
+         strPlayer += playerArr[i].outerHTML
       }
-      console.log(strPlayer) 
+      console.log(strPlayer)
+      this.innerHTML = strPlayer
+   }  else {
+      this.innerHTML = data
    }
    this.classList.remove('over')
    this.classList.add('active')
-   this.innerHTML = data
 }
+
+
+function keeperShirt() {
+
+}
+
 
 function dragOverHandler(e) {
    e.preventDefault()
