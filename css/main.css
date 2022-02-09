@@ -547,7 +547,7 @@ img {
 }
 
 .pitch__player img {
-  width: 130px;
+  width: 150px;
 }
 
 .pitch__player .squad-name {
@@ -557,7 +557,7 @@ img {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 2.4rem;
   padding: 0.1em 0.3em;
   background: white;
   color: #1f1f1f;
