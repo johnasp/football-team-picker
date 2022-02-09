@@ -68,6 +68,11 @@
       "position": "Forward"
     },
     {
+      "name": "Robson",
+      "shirtNumber": 15,
+      "position": "Midfield"
+    },
+    {
       "name": "Carey",
       "shirtNumber": 16,
       "position": "Midfield"
@@ -108,6 +113,16 @@
       "position": "Defender"
     },
     {
+      "name": "Kirk",
+      "shirtNumber": 27,
+      "position": "Midfield"
+    },
+    {
+      "name": "Beesley",
+      "shirtNumber": 28,
+      "position": "Forward"
+    },
+    {
       "name": "Garbutt",
       "shirtNumber": 29,
       "position": "Defender"
@@ -116,6 +131,11 @@
       "name": "Grimshaw",
       "shirtNumber": 32,
       "position": "Goalkeeper"
+    },
+    {
+      "name": "Thorniley",
+      "shirtNumber": 34,
+      "position": "Defender"
     },
     {
       "name": "Sterling",
