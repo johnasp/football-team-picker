@@ -16,8 +16,6 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
-
 @mixin centerer {
   position: absolute;
   top: 50%;

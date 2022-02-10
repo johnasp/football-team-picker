@@ -1,5 +1,6 @@
-// 442 //
 .formation-442 {
+   display: grid;
+   gap: 2em;
    grid-template-columns: repeat(4, 1fr);
    grid-template-areas: 
       "g d2 m6 ."
