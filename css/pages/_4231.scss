@@ -1,13 +1,12 @@
-.formation-532 {
+.formation-4231 {
    display: grid;
    gap: 2em;
-   grid-template-columns: repeat(4, 1fr);
+   grid-template-columns: repeat(5, 1fr);
    grid-template-areas: 
-      "g p2 . ."
-      "g p3 p7 ."
-      "g p4 p8 p10"
-      "g p5 p9 p11"
-      "g p6 . .";
+      "g p2 . . ."
+      "g p3 p6 p8 ."
+      "g p4 p7 p9 p11"
+      "g p5 . p10 .";
    .player-1 {
       grid-area: g;
    }
@@ -41,8 +40,12 @@
    .player-11 {
       grid-area: p11;
    }
-   .player-10, .player-11 {
+   .player-8, .player-9, .player-10 {
       position: relative;
       top: -10vh;
    }
+   .player-11 {
+      position: relative;
+      top: -10vh;
+   } 
 }

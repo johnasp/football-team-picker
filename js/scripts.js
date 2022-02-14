@@ -103,6 +103,10 @@ for (let i = 0; i < formations.length; i++) {
          teamGrid.className = ""
          teamGrid.classList.add('formation-532')
       } 
+      if (btnFormation == 4231) {
+         teamGrid.className = ""
+         teamGrid.classList.add('formation-4231')
+      } 
 
    })
 }

@@ -44,7 +44,7 @@
          flex-basis: 100%;
       }
       &:hover {
-         border: 3px dashed $primary;
+         border: 1px dashed $primary;
          cursor: pointer;
       }
       &:nth-child(odd) {
@@ -58,5 +58,17 @@
       justify-content: center;
       align-items: center;
       gap: 10px;      
+   }
+   button {
+      font-size: 1.8rem;
+      border-radius: .3em;
+      border: none;
+      background: white;
+      padding: .3em .6em;
+      border-bottom: 3px solid rgb(207, 100, 0);
+      &:hover {
+         cursor: pointer;
+         background: rgba(226, 226, 226, 0.9);
+      }
    }
 }
