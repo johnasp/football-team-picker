@@ -11,15 +11,13 @@
       height: 100%;
       object-fit: cover;
    }
-   .pitch__team-grid {
-      position: relative;
-      display: grid;
-      height: 100vh;
-      width: 100%;
-      max-width: 1820px;
-      gap: 2em;
-   }
 } 
+#pitch__team-grid {
+   position: relative;
+   height: 100vh;
+   width: 100%;
+   max-width: 1820px;
+}
 .pitch__player {
    align-self: center;
    justify-self: center;
@@ -50,7 +48,6 @@
    }
    .squad-number {
       @include absCentre();
-      visibility: hidden; 
       color: white;
       font-size: 3.2rem;
       font-weight: bold;

@@ -81,3 +81,27 @@ function dragEnterHandler(e) {
 function dragLeaveHandler() {
    this.classList.remove('over')
 }
+
+// PITCH FORMATION CHANGER 
+const teamGrid = document.querySelector('#pitch__team-grid')
+const formations = document.querySelectorAll('.controls__formation-btns button')
+
+for (let i = 0; i < formations.length; i++) {
+   formations[i].addEventListener('click', function(){
+      // Get the formation class from the button
+      let btnFormation = this.classList.value
+      // Change pitch__team-grid based on the formation class within the button
+      if (btnFormation == 442) {
+         teamGrid.className = ""
+         teamGrid.classList.add('formation-442')
+      } 
+      if (btnFormation == 433) {
+         teamGrid.className = ""
+         teamGrid.classList.add('formation-433')
+      } 
+
+   })
+}
+
+
+
