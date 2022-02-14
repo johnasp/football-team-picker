@@ -1,0 +1,44 @@
+.formation-532 {
+   display: grid;
+   gap: 2em;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-areas: 
+      "g p2 . ."
+      "g p3 p7 ."
+      "g p4 p8 p10"
+      "g p5 p9 p11"
+      "g p6 . .";
+   .player-1 {
+      grid-area: g;
+   }
+   .player-2 {
+      grid-area: p2;
+   }
+   .player-3 {
+      grid-area: p3;
+   }
+   .player-4 {
+      grid-area: p4;
+   }
+   .player-5 {
+      grid-area: p5;
+   }
+   .player-6 {
+      grid-area: p6;
+   }
+   .player-7 {
+      grid-area: p7;
+   }
+   .player-8 {
+      grid-area: p8;
+   }
+   .player-9 {
+      grid-area: p9;
+   }
+   .player-10 {
+      grid-area: p10;
+   }
+   .player-11 {
+      grid-area: p11;
+   }
+}

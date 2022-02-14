@@ -626,7 +626,7 @@ img {
 
 .formation-442 .player-1 {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 4;
+  -ms-grid-row-span: 5;
   -ms-grid-column: 1;
   grid-area: g;
 }
@@ -702,7 +702,7 @@ img {
 
 .formation-433 .player-1 {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 4;
+  -ms-grid-row-span: 5;
   -ms-grid-column: 1;
   grid-area: g;
 }
@@ -732,8 +732,8 @@ img {
 }
 
 .formation-433 .player-6 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
   grid-area: p6;
 }
 
@@ -750,19 +750,19 @@ img {
 }
 
 .formation-433 .player-9 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
   grid-area: p9;
 }
 
 .formation-433 .player-10 {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 4;
   grid-area: p10;
 }
 
 .formation-433 .player-11 {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 4;
   grid-area: p11;
 }
@@ -770,5 +770,81 @@ img {
 .formation-433 .player-6, .formation-433 .player-7, .formation-433 .player-8, .formation-433 .player-9, .formation-433 .player-10, .formation-433 .player-11 {
   position: relative;
   top: 12vh;
+}
+
+.formation-532 {
+  display: -ms-grid;
+  display: grid;
+  gap: 2em;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "g p2 . ." "g p3 p7 ." "g p4 p8 p10" "g p5 p9 p11" "g p6 . .";
+}
+
+.formation-532 .player-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  grid-area: g;
+}
+
+.formation-532 .player-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: p2;
+}
+
+.formation-532 .player-3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: p3;
+}
+
+.formation-532 .player-4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: p4;
+}
+
+.formation-532 .player-5 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: p5;
+}
+
+.formation-532 .player-6 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: p6;
+}
+
+.formation-532 .player-7 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: p7;
+}
+
+.formation-532 .player-8 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: p8;
+}
+
+.formation-532 .player-9 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: p9;
+}
+
+.formation-532 .player-10 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: p10;
+}
+
+.formation-532 .player-11 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: p11;
 }
 /*# sourceMappingURL=main.css.map */
