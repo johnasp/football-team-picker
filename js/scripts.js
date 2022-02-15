@@ -82,10 +82,12 @@ function dragLeaveHandler() {
    this.classList.remove('over')
 }
 
-// PITCH FORMATION CHANGER 
+// ---------------------
+// Formation changer
+// ---------------------
 const teamGrid = document.querySelector('#pitch__team-grid')
 const formations = document.querySelectorAll('.controls__formation-btns button')
-
+const formationLabel = document.querySelector('.formation-label')
 for (let i = 0; i < formations.length; i++) {
    formations[i].addEventListener('click', function(){
       // Get the formation class from the button
@@ -94,14 +96,22 @@ for (let i = 0; i < formations.length; i++) {
       if (btnFormation == 442) {
          teamGrid.className = ""
          teamGrid.classList.add('formation-442')
+         formationLabel.textContent = '4-4-2'
       } 
       if (btnFormation == 433) {
          teamGrid.className = ""
          teamGrid.classList.add('formation-433')
+         formationLabel.textContent = '4-3-3'
       } 
       if (btnFormation == 532) {
          teamGrid.className = ""
          teamGrid.classList.add('formation-532')
+         formationLabel.textContent = '5-3-2'
+      } 
+      if (btnFormation == 352) {
+         teamGrid.className = ""
+         teamGrid.classList.add('formation-352')
+         formationLabel.textContent = '3-5-2'
       } 
       if (btnFormation == 4231) {
          teamGrid.className = ""
@@ -110,6 +120,22 @@ for (let i = 0; i < formations.length; i++) {
 
    })
 }
+
+
+
+
+
+// STOP DUPLICATED PLAYERS BEING ALLOW ONTO THE PITCH
+
+// Check the player being dragged and store this in a variable
+
+// Check to see if the player is already on the pitch
+
+// If he is isnt on the pitch, allow the drop
+
+// If he IS already on the pitch, block the drop/do not allow it AND popup an error message
+
+
 
 
 

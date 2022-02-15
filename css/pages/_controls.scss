@@ -60,12 +60,13 @@
       gap: 10px;      
    }
    button {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       border-radius: .3em;
       border: none;
       background: white;
       padding: .3em .6em;
-      border-bottom: 3px solid rgb(207, 100, 0);
+      border-bottom: 2px solid rgb(207, 100, 0);
+      border-right: 2px solid rgb(207, 100, 0);
       &:hover {
          cursor: pointer;
          background: rgba(226, 226, 226, 0.9);
