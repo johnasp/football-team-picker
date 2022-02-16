@@ -5,142 +5,170 @@
     {
       "name": "Maxwell",
       "shirtNumber": 1,
-      "position": "Goalkeeper"
+      "position": "Goalkeeper",
+      "positionKey": "1"
     },
     {
       "name": "Connolly",
       "shirtNumber": 2,
-      "position": "Defender"
+      "position": "Defender",
+      "positionKey": "2"
     },
     {
       "name": "Husband",
       "shirtNumber": 3,
-      "position": "Defender"
+      "position": "Defender",
+      "positionKey": "2"
     },
     {
       "name": "Gabriel",
       "shirtNumber": 4,
-      "position": "Defender"
+      "position": "Defender",
+      "positionKey": "2"
     },
     {
       "name": "James",
       "shirtNumber": 5,
-      "position": "Defender"
+      "position": "Defender",
+      "positionKey": "2"
     },
     {
       "name": "Stewart",
       "shirtNumber": 6,
-      "position": "Midfield"
+      "position": "Midfield",
+      "positionKey": "3"
     },
     {
       "name": "Dale",
       "shirtNumber": 7,
-      "position": "Midfield"
+      "position": "Midfield",
+      "positionKey": "3"
     },
     {
       "name": "Yates",
       "shirtNumber": 9,
-      "position": "Forward"
+      "position": "Forward",
+      "positionKey": "4"
     },
     {
       "name": "Anderson",
       "shirtNumber": 10,
-      "position": "Forward"
+      "position": "Forward",
+      "positionKey": "4"
     },
     {
       "name": "Bowler",
       "shirtNumber": 11,
-      "position": "Forward"
+      "position": "Forward",
+      "positionKey": "4"
     },
     {
       "name": "Dougall",
       "shirtNumber": 12,
-      "position": "Midfield"
+      "position": "Midfield",
+      "positionKey": "3"
     },
     {
       "name": "Moore",
       "shirtNumber": 13,
-      "position": "Goalkeeper"
+      "position": "Goalkeeper",
+      "positionKey": "1"
     },
     {
       "name": "Madine",
       "shirtNumber": 14,
-      "position": "Forward"
+      "position": "Forward",
+      "positionKey": "4"
     },
     {
       "name": "Robson",
       "shirtNumber": 15,
-      "position": "Midfield"
+      "position": "Midfield",
+      "positionKey": "3"
     },
     {
       "name": "Carey",
       "shirtNumber": 16,
-      "position": "Midfield"
+      "position": "Midfield",
+      "positionKey": "3"
     },
     {
       "name": "Virtue",
       "shirtNumber": 17,
-      "position": "Midfield"
+      "position": "Midfield",
+      "positionKey": "3"
     },
     {
       "name": "Ward",
       "shirtNumber": 18,
-      "position": "Midfield"
+      "position": "Midfield",
+      "positionKey": "3"
     },
     {
       "name": "Lavery",
       "shirtNumber": 19,
-      "position": "Forward"
+      "position": "Forward",
+      "positionKey": "4"
     },
     {
       "name": "Casey",
       "shirtNumber": 20,
-      "position": "Midfield"
+      "position": "Midfield",
+      "positionKey": "3"
     },
     {
       "name": "Ekpiteta",
       "shirtNumber": 21,
-      "position": "Defender"
+      "position": "Defender",
+      "positionKey": "2"
     },
     {
       "name": "Hamilton",
       "shirtNumber": 22,
-      "position": "Forward"
+      "position": "Forward",
+      "positionKey": "4"
     },
     {
       "name": "Keogh",
       "shirtNumber": 26,
-      "position": "Defender"
+      "position": "Defender",
+      "positionKey": "2"
     },
     {
       "name": "Kirk",
       "shirtNumber": 27,
-      "position": "Midfield"
+      "position": "Midfield",
+      "positionKey": "3"
     },
     {
       "name": "Beesley",
       "shirtNumber": 28,
-      "position": "Forward"
+      "position": "Forward",
+      "positionKey": "4"
     },
     {
       "name": "Garbutt",
       "shirtNumber": 29,
-      "position": "Defender"
+      "position": "Defender",
+      "positionKey": "2"
     },
     {
       "name": "Grimshaw",
       "shirtNumber": 32,
-      "position": "Goalkeeper"
+      "position": "Goalkeeper",
+      "positionKey": "1"
     },
     {
       "name": "Thorniley",
       "shirtNumber": 34,
-      "position": "Defender"
+      "position": "Defender",
+      "positionKey": "2"
     },
     {
       "name": "Sterling",
       "shirtNumber": 35,
-      "position": "Defender"
+      "position": "Defender",
+      "positionKey": "2"
     }
 
   ]

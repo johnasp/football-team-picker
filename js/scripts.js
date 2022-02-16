@@ -15,11 +15,21 @@ for (const pitchPlayer of pitchPlayers ) {
 const playerEl = document.querySelector('.controls__players')
 fetch('players.json')
    .then(response => response.json()) // converts JSON from string to array
-   .then(data => { // Print out player names
-      for (let i = 0; i < data.players.length; i++ ) {
-         const shirtNumber = data.players[i].shirtNumber
-         const playerName = data.players[i].name
-         const position = data.players[i].position
+   .then(data => { 
+      const playersArr = data.players // Sort players array into positions
+      playersArr.sort((a, b) => {
+         return a.positionKey - b.positionKey;
+     });
+
+     playersArr.forEach((e) => {
+      console.log(`$ ${e.position}`);
+  });
+     
+
+      for (let i = 0; i < playersArr.length; i++ ) {
+         const shirtNumber = playersArr[i].shirtNumber
+         const playerName = playersArr[i].name
+         const position = playersArr[i].position
          playerEl.innerHTML += 
             `<div class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
                <img src="images/pool-shirt.svg" alt="Blackpool FC shirt">
@@ -28,6 +38,8 @@ fetch('players.json')
                <p class="squad-position"> ${position}</p>
             </div>`
       }
+
+      console.log(playersArr)
    })  
    .then(function(){   // Attach drag handlers to players list
       const players = document.querySelectorAll('.controls__player')
@@ -116,6 +128,7 @@ for (let i = 0; i < formations.length; i++) {
       if (btnFormation == 4231) {
          teamGrid.className = ""
          teamGrid.classList.add('formation-4231')
+         formationLabel.textContent = '4-2-3-1'
       } 
 
    })
