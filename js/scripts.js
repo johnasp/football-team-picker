@@ -1,3 +1,10 @@
+"use script"
+
+let john;
+console.log(john)
+john = "john"
+
+
 // ---------------------
 // Drag and drop 
 // ---------------------
@@ -24,26 +31,22 @@ fetch('players.json')
      playersArr.forEach((e) => {
       console.log(`$ ${e.position}`);
   });
-     
-
-      for (let i = 0; i < playersArr.length; i++ ) {
-         const shirtNumber = playersArr[i].shirtNumber
-         const playerName = playersArr[i].name
-         const position = playersArr[i].position
-         playerEl.innerHTML += 
-            `<div class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
-               <img src="images/pool-shirt.svg" alt="Blackpool FC shirt">
-               <p class="squad-number">${shirtNumber}</p>
-               <p class="squad-name"> ${playerName}</p>
-               <p class="squad-position"> ${position}</p>
-            </div>`
-      }
-
-      console.log(playersArr)
+   for (let i = 0; i < playersArr.length; i++ ) {
+      const shirtNumber = playersArr[i].shirtNumber
+      const playerName = playersArr[i].name
+      const position = playersArr[i].position
+      playerEl.innerHTML += 
+         `<div class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
+            <img src="images/pool-shirt.svg" alt="Blackpool FC shirt">
+            <p class="squad-number">${shirtNumber}</p>
+            <p class="squad-name"> ${playerName}</p>
+            <p class="squad-position"> ${position}</p>
+         </div>`
+   }
    })  
    .then(function(){   // Attach drag handlers to players list
       const players = document.querySelectorAll('.controls__player')
-      for (i = 0; i < players.length; i++) {
+      for (let i = 0; i < players.length; i++) {
          players[i].addEventListener('dragstart', dragStartHandler)
       }
    })  
@@ -97,9 +100,12 @@ function dragLeaveHandler() {
 // ---------------------
 // Formation changer
 // ---------------------
+
 const teamGrid = document.querySelector('#pitch__team-grid')
 const formations = document.querySelectorAll('.controls__formation-btns button')
 const formationLabel = document.querySelector('.formation-label')
+
+
 for (let i = 0; i < formations.length; i++) {
    formations[i].addEventListener('click', function(){
       // Get the formation class from the button
@@ -130,7 +136,6 @@ for (let i = 0; i < formations.length; i++) {
          teamGrid.classList.add('formation-4231')
          formationLabel.textContent = '4-2-3-1'
       } 
-
    })
 }
 
