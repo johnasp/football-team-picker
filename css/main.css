@@ -459,33 +459,38 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: .8em;
-  font-weight: bold;
   text-transform: uppercase;
-  font-size: 1.8rem;
-  padding: 0.6em 1em;
   margin: 0;
   background: #feedda;
+  position: relative;
 }
 
-.controls__player img {
+.controls__player .position-label {
+  content: attr(position) " ";
+  display: block;
+  background: #242424;
+  color: white;
+  width: 100%;
+  font-size: 12px;
+  padding: 4px;
+}
+
+.controls__player .controls__player-shirt {
   display: none;
 }
 
-.controls__player .squad-number {
-  margin-right: 0.4em;
+.controls__player .controls__player-name {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: .5rem 1rem 0 1rem;
 }
 
-.controls__player p {
-  margin: 0;
-}
-
-.controls__player .squad-position {
-  font-size: 1.2rem;
-  margin-top: 0.4em;
-  font-weight: normal;
+.controls__player .controls__player-squad {
+  font-size: 1.3rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  margin-left: 1rem;
+  margin-bottom: .5rem;
 }
 
 .controls__player:hover {

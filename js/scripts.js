@@ -1,10 +1,5 @@
 "use script"
 
-let john;
-console.log(john)
-john = "john"
-
-
 // ---------------------
 // Drag and drop 
 // ---------------------
@@ -25,22 +20,18 @@ fetch('players.json')
    .then(data => { 
       const playersArr = data.players // Sort players array into positions
       playersArr.sort((a, b) => {
-         return a.positionKey - b.positionKey;
-     });
-
-     playersArr.forEach((e) => {
-      console.log(`$ ${e.position}`);
-  });
+         return a.positionKey - b.positionKey
+     })
    for (let i = 0; i < playersArr.length; i++ ) {
       const shirtNumber = playersArr[i].shirtNumber
       const playerName = playersArr[i].name
-      const position = playersArr[i].position
+      const position = playersArr[i].position.toLowerCase()
+      const positionKey = playersArr[i].positionKey
       playerEl.innerHTML += 
-         `<div class="controls__player" id="shirt-${shirtNumber}" draggable="true" >
-            <img src="images/pool-shirt.svg" alt="Blackpool FC shirt">
-            <p class="squad-number">${shirtNumber}</p>
-            <p class="squad-name"> ${playerName}</p>
-            <p class="squad-position"> ${position}</p>
+         `<div class="controls__player ${position}" id="shirt-${shirtNumber}" draggable="true" >
+            <img class="controls__player-shirt" src="images/pool-shirt.svg" alt="Blackpool FC shirt">
+            <p class="controls__player-name" positionkey="${positionKey}"> ${playerName}</p>
+            <span class="controls__player-squad">${shirtNumber} - ${position}</span>
          </div>`
    }
    })  
@@ -57,14 +48,14 @@ function dragStartHandler(e){
 
 function dropHandler(e) {
    e.preventDefault()
-   const data = e.dataTransfer.getData('text') // Get data payload
-   const htmlString = data    //convert string data to array for GK test and strip
-   let playerHTML = new DOMParser().parseFromString(htmlString, "text/html")
-   playerHTML = playerHTML.body.children
+   const data = e.dataTransfer.getData('text') // Get data payload as a string
+   let playerHTML = new DOMParser().parseFromString(data, "text/html")  //convert string to HTML
+   playerHTML = playerHTML.body.children[1].getAttribute("class") // convert to HTML collection
+   GKtest = playerHTML.body.children[1].getAttribute("class") // convert to HTML collection
+   console.log(playerHTML)
    let playerArr = Array.from(playerHTML)
-   let playerPosition = playerArr[3].innerHTML
-   playerPosition = playerPosition.trim() // Removing whitespace from string which was causing if comporison test to fail
-   if ( playerPosition == 'Goalkeeper') {
+   const playerPosition = 'goalkeeper'
+   if ( playerPosition == 'goalkeeper') {
       this.classList.add('goalie-on')
       playerArr.shift() 
       let strPlayer = 
@@ -74,7 +65,6 @@ function dropHandler(e) {
       for (let i=0; i < playerArr.length; i++) {
          strPlayer += playerArr[i].outerHTML
       }
-      console.log(strPlayer)
       this.innerHTML = strPlayer
    }  
    else {
@@ -98,13 +88,28 @@ function dragLeaveHandler() {
 }
 
 // ---------------------
+// Add postion labels to sidebar
+// ----------------------
+
+function createPositionLabels() {
+   const positions = ['goalkeeper', 'defender', 'midfield', 'forward']
+   for (const position of positions) {
+      let labelEl = document.createElement('div')
+      let labelText = document.createTextNode(position);
+      labelEl.appendChild(labelText);
+      labelEl.classList.add(position)
+      console.log(labelEl)
+   }
+}
+setTimeout(createPositionLabels, 1000)
+
+// ---------------------
 // Formation changer
 // ---------------------
 
 const teamGrid = document.querySelector('#pitch__team-grid')
 const formations = document.querySelectorAll('.controls__formation-btns button')
 const formationLabel = document.querySelector('.formation-label')
-
 
 for (let i = 0; i < formations.length; i++) {
    formations[i].addEventListener('click', function(){
@@ -138,7 +143,6 @@ for (let i = 0; i < formations.length; i++) {
       } 
    })
 }
-
 
 
 
