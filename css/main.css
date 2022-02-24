@@ -453,6 +453,16 @@ img {
   margin-bottom: 0.6em;
 }
 
+.position-label {
+  content: attr(position) " ";
+  display: block;
+  background: #242424;
+  color: white;
+  width: 100%;
+  font-size: 12px;
+  padding: 4px;
+}
+
 .controls__player {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -465,27 +475,17 @@ img {
   position: relative;
 }
 
-.controls__player .position-label {
-  content: attr(position) " ";
-  display: block;
-  background: #242424;
-  color: white;
-  width: 100%;
-  font-size: 12px;
-  padding: 4px;
-}
-
-.controls__player .controls__player-shirt {
+.controls__player .player-shirt {
   display: none;
 }
 
-.controls__player .controls__player-name {
+.controls__player .player-name {
   font-weight: bold;
   font-size: 2rem;
   margin: .5rem 1rem 0 1rem;
 }
 
-.controls__player .controls__player-squad {
+.controls__player .player-squad-no {
   font-size: 1.3rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -586,8 +586,7 @@ img {
   width: 150px;
 }
 
-.pitch__player .squad-name {
-  display: none;
+.pitch__player .player-name {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -603,7 +602,7 @@ img {
   text-align: center;
 }
 
-.pitch__player .squad-number {
+.pitch__player .player-squad-no {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -615,7 +614,7 @@ img {
   margin: 0;
 }
 
-.pitch__player .squad-position {
+.pitch__player .player-position {
   display: none;
 }
 

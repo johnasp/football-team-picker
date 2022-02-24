@@ -29,9 +29,10 @@ fetch('players.json')
       const positionKey = playersArr[i].positionKey
       playerEl.innerHTML += 
          `<div class="controls__player ${position}" id="shirt-${shirtNumber}" draggable="true" >
-            <img class="controls__player-shirt" src="images/pool-shirt.svg" alt="Blackpool FC shirt">
-            <p class="controls__player-name" positionkey="${positionKey}"> ${playerName}</p>
-            <span class="controls__player-squad">${shirtNumber} - ${position}</span>
+            <img class="player-shirt" src="images/pool-shirt.svg" alt="Blackpool FC shirt">
+            <p class="player-name" positionkey="${positionKey}"> ${playerName}</p>
+            <span class="player-squad-no">${shirtNumber}</span>
+            <span class="player-position">${position}</span>
          </div>`
    }
    })  
@@ -48,14 +49,13 @@ function dragStartHandler(e){
 
 function dropHandler(e) {
    e.preventDefault()
-   const data = e.dataTransfer.getData('text') // Get data payload as a string
-   let playerHTML = new DOMParser().parseFromString(data, "text/html")  //convert string to HTML
-   playerHTML = playerHTML.body.children[1].getAttribute("class") // convert to HTML collection
-   GKtest = playerHTML.body.children[1].getAttribute("class") // convert to HTML collection
-   console.log(playerHTML)
-   let playerArr = Array.from(playerHTML)
-   const playerPosition = 'goalkeeper'
-   if ( playerPosition == 'goalkeeper') {
+   const data = e.dataTransfer.getData('text') // Get player data payload, which is a copy of a control bar player
+   let playerHTML = new DOMParser().parseFromString(data, "text/html")  // convert string to HTML
+   //playerHTML = playerHTML.body.children[1].getAttribute("class") // convert to HTML collection
+   //console.log(data)
+   //let playerArr = Array.from(playerHTML)
+   const playerPosition = 'f'
+   if ( playerPosition == 'goalkeeper') { // If player is a goalie, drag the goalie shirt
       this.classList.add('goalie-on')
       playerArr.shift() 
       let strPlayer = 
@@ -69,6 +69,7 @@ function dropHandler(e) {
    }  
    else {
       this.innerHTML = data
+      console.log(data)
    }
    this.classList.remove('over')
    this.classList.add('active')
