@@ -464,15 +464,14 @@ img {
 }
 
 .controls__player {
+  text-transform: uppercase;
+  background: #feedda;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  text-transform: uppercase;
-  margin: 0;
-  background: #feedda;
-  position: relative;
 }
 
 .controls__player .player-shirt {
@@ -482,15 +481,23 @@ img {
 .controls__player .player-name {
   font-weight: bold;
   font-size: 2rem;
-  margin: .5rem 1rem 0 1rem;
+  margin: .5rem 1rem .2rem 1rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .controls__player .player-squad-no {
   font-size: 1.3rem;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  margin: 0 .5rem .5rem 1rem;
   margin-left: 1rem;
   margin-bottom: .5rem;
+  margin-right: .5rem;
+}
+
+.controls__player .player-position {
+  font-size: 12px;
 }
 
 .controls__player:hover {
@@ -582,6 +589,10 @@ img {
   padding: 12px;
 }
 
+.pitch__player.active .player-name {
+  display: block;
+}
+
 .pitch__player img {
   width: 150px;
 }
@@ -592,7 +603,7 @@ img {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   font-weight: normal;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   padding: 0.1em 0.4em;
   background: white;
   color: #1f1f1f;
@@ -600,6 +611,7 @@ img {
   font-weight: bold;
   margin: 0;
   text-align: center;
+  display: none;
 }
 
 .pitch__player .player-squad-no {
@@ -616,14 +628,6 @@ img {
 
 .pitch__player .player-position {
   display: none;
-}
-
-.pitch__player.active .squad-number {
-  visibility: visible;
-}
-
-.pitch__player.active .squad-name {
-  display: block;
 }
 
 .pitch__player .goalie-shirt {

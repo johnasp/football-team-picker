@@ -28,25 +28,30 @@
    padding: 4px;
 }
 .controls__player {
-      display: flex;
-      flex-wrap: wrap;
       text-transform: uppercase;
-      margin: 0;
       background: $secondary;
       position: relative;
+      display: flex;
+      flex-wrap: wrap;
       .player-shirt {
          display: none;
       }
       .player-name {
          font-weight: bold;
          font-size: 2rem;
-         margin: .5rem 1rem 0 1rem;
+         margin: .5rem 1rem .2rem 1rem;
+         flex-basis: 100%;
       }
       .player-squad-no {
          font-size: 1.3rem;
-         flex-basis: 100%;
+         flex-basis: auto;
+         margin: 0 .5rem .5rem 1rem;
          margin-left: 1rem;
          margin-bottom: .5rem;
+         margin-right: .5rem;
+      }
+      .player-position {
+         font-size: 12px;
       }
       &:hover {
          border: 1px dashed $primary;

@@ -32,7 +32,7 @@ fetch('players.json')
             <img class="player-shirt" src="images/pool-shirt.svg" alt="Blackpool FC shirt">
             <p class="player-name" positionkey="${positionKey}"> ${playerName}</p>
             <span class="player-squad-no">${shirtNumber}</span>
-            <span class="player-position">${position}</span>
+            <span class="player-position">- ${position}</span>
          </div>`
    }
    })  
@@ -49,13 +49,13 @@ function dragStartHandler(e){
 
 function dropHandler(e) {
    e.preventDefault()
-   const data = e.dataTransfer.getData('text') // Get player data payload, which is a copy of a control bar player
-   let playerHTML = new DOMParser().parseFromString(data, "text/html")  // convert string to HTML
-   //playerHTML = playerHTML.body.children[1].getAttribute("class") // convert to HTML collection
-   //console.log(data)
-   //let playerArr = Array.from(playerHTML)
-   const playerPosition = 'f'
-   if ( playerPosition == 'goalkeeper') { // If player is a goalie, drag the goalie shirt
+   const data = e.dataTransfer.getData('text') // Get dragged player data payload
+   // Test if player is a goalie.  Drop GK shirt if so, if not drop outfield shirt
+   const playerHTML = new DOMParser().parseFromString(data, "text/html")  
+   const positionCode = playerHTML.body.children[1].getAttribute("positionkey") 
+   let playerArr = Array.from(playerHTML)
+   console.log(playerArr)
+   if ( positionCode == '1') { 
       this.classList.add('goalie-on')
       playerArr.shift() 
       let strPlayer = 
