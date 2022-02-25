@@ -49,27 +49,15 @@ function dragStartHandler(e){
 
 function dropHandler(e) {
    e.preventDefault()
-   const data = e.dataTransfer.getData('text') // Get dragged player data payload
-   // Test if player is a goalie.  Drop GK shirt if so, if not drop outfield shirt
-   const playerHTML = new DOMParser().parseFromString(data, "text/html")  
+   const playerData = e.dataTransfer.getData('text') // Store dragged player data payload
+   const playerHTML = new DOMParser().parseFromString(playerData, "text/html")  // Convert string to DOM element
    const positionCode = playerHTML.body.children[1].getAttribute("positionkey") 
-   let playerArr = Array.from(playerHTML)
-   console.log(playerArr)
-   if ( positionCode == '1') { 
-      this.classList.add('goalie-on')
-      playerArr.shift() 
-      let strPlayer = 
-      `
-         <img src="images/pool-shirt-gk.svg" class="goalie-shirt" alt="Blackpool FC goalkeeper shirt">
-      `
-      for (let i=0; i < playerArr.length; i++) {
-         strPlayer += playerArr[i].outerHTML
-      }
-      this.innerHTML = strPlayer
+   if ( positionCode == '1') { // If goalie, replace with GK shirt
+      const gk = playerData.replace('images/pool-shirt.svg','images/pool-shirt-gk.svg')
+      this.innerHTML = gk
    }  
    else {
-      this.innerHTML = data
-      console.log(data)
+      this.innerHTML = playerData
    }
    this.classList.remove('over')
    this.classList.add('active')
