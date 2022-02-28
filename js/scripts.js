@@ -22,25 +22,35 @@ fetch('players.json')
       playersArr.sort((a, b) => {
          return a.positionKey - b.positionKey
      })
-   for (let i = 0; i < playersArr.length; i++ ) {
-      const shirtNumber = playersArr[i].shirtNumber
-      const playerName = playersArr[i].name
-      const position = playersArr[i].position.toLowerCase()
-      const positionKey = playersArr[i].positionKey
-      playerEl.innerHTML += 
-         `<div class="controls__player ${position}" id="shirt-${shirtNumber}" draggable="true" >
-            <img class="player-shirt" src="images/pool-shirt.svg" alt="Blackpool FC shirt">
-            <p class="player-name" positionkey="${positionKey}"> ${playerName}</p>
-            <span class="player-squad-no">${shirtNumber}</span>
-            <span class="player-position">- ${position}</span>
-         </div>`
-   }
+      for (let i = 0; i < playersArr.length; i++ ) {
+         const shirtNumber = playersArr[i].shirtNumber
+         const playerName = playersArr[i].name
+         const position = playersArr[i].position.toLowerCase()
+         const positionKey = playersArr[i].positionKey
+         playerEl.innerHTML += 
+            `<div class="controls__player ${position}" id="shirt-${shirtNumber}" draggable="true" >
+               <img class="player-shirt" src="images/pool-shirt.svg" alt="Blackpool FC shirt">
+               <p class="player-name" positionkey="${positionKey}"> ${playerName}</p>
+               <span class="player-squad-no">${shirtNumber}</span>
+               <span class="player-position">- ${position}</span>
+            </div>`
+      }
    })  
    .then(function(){   // Attach drag handlers to players list
       const players = document.querySelectorAll('.controls__player')
       for (let i = 0; i < players.length; i++) {
          players[i].addEventListener('dragstart', dragStartHandler)
       }
+   })  
+   .then(function(){   // Attach position labels above first position
+      const firstGK = document.querySelector('.controls__players .goalkeeper')
+      const firstDF = document.querySelector('.controls__players .defender')
+      const firstMF = document.querySelector('.controls__players .midfield')
+      const firstFW = document.querySelector('.controls__players .forward')
+      firstGK.insertAdjacentHTML('beforebegin', '<div class="position-label">Goalkeepers</div>')
+      firstDF.insertAdjacentHTML('beforebegin', '<div class="position-label">Defenders</div>')
+      firstMF.insertAdjacentHTML('beforebegin', '<div class="position-label">Midfielders</div>')
+      firstFW.insertAdjacentHTML('beforebegin', '<div class="position-label">Forwards</div>')
    })  
   
 function dragStartHandler(e){
@@ -62,35 +72,16 @@ function dropHandler(e) {
    this.classList.remove('over')
    this.classList.add('active')
 }
-
 function dragOverHandler(e) {
    e.preventDefault()
    this.classList.add('over')
 }
-
 function dragEnterHandler(e) {
    e.preventDefault()
 }
-
 function dragLeaveHandler() {
    this.classList.remove('over')
 }
-
-// ---------------------
-// Add postion labels to sidebar
-// ----------------------
-
-function createPositionLabels() {
-   const positions = ['goalkeeper', 'defender', 'midfield', 'forward']
-   for (const position of positions) {
-      let labelEl = document.createElement('div')
-      let labelText = document.createTextNode(position);
-      labelEl.appendChild(labelText);
-      labelEl.classList.add(position)
-      console.log(labelEl)
-   }
-}
-setTimeout(createPositionLabels, 1000)
 
 // ---------------------
 // Formation changer
@@ -132,9 +123,6 @@ for (let i = 0; i < formations.length; i++) {
       } 
    })
 }
-
-
-
 
 // STOP DUPLICATED PLAYERS BEING ALLOW ONTO THE PITCH
 
