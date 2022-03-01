@@ -575,9 +575,8 @@ img {
 }
 
 .pitch__player {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
   -ms-grid-column-align: center;
       justify-self: center;
   position: relative;
@@ -586,8 +585,15 @@ img {
   font-size: 1rem;
 }
 
+.pitch__player.player-1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  top: -14px;
+}
+
 .pitch__player img {
-  max-width: 120px;
+  max-width: 100px;
 }
 
 .pitch__player.over {

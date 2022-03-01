@@ -19,14 +19,18 @@
    max-width: 1820px;
 }
 .pitch__player {
-   align-self: center;
+   align-self: baseline;
    justify-self: center;
    position: relative;
    padding: 0.8em;
    border: 0.4em solid transparent;
    font-size: 1rem;
+   &.player-1 {
+      align-self: center;
+      top: -14px;
+   }
    img {
-      max-width: 120px;
+      max-width: 100px;
    }
    &.over {
       border: 0.2em dashed rgba(255,255,255, 0.7);
