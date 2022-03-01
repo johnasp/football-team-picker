@@ -384,7 +384,8 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .container {
@@ -393,6 +394,7 @@ img {
   -ms-grid-columns: 250px 1fr;
       grid-template-columns: 250px 1fr;
   height: 100vh;
+  overflow: hidden;
 }
 
 /**
@@ -567,8 +569,8 @@ img {
 
 #pitch__team-grid {
   position: relative;
-  height: 100vh;
   width: 100%;
+  height: 100%;
   max-width: 1820px;
 }
 
@@ -579,22 +581,22 @@ img {
   -ms-grid-column-align: center;
       justify-self: center;
   position: relative;
-  padding: 12px;
-  border: 4px solid transparent;
+  padding: 0.8em;
+  border: 0.4em solid transparent;
+  font-size: 1rem;
+}
+
+.pitch__player img {
+  max-width: 120px;
 }
 
 .pitch__player.over {
-  border: 2px dashed rgba(255, 255, 255, 0.7);
+  border: 0.2em dashed rgba(255, 255, 255, 0.7);
   background: #000;
-  padding: 12px;
 }
 
 .pitch__player.active .player-name {
   display: block;
-}
-
-.pitch__player img {
-  width: 150px;
 }
 
 .pitch__player .player-name {
@@ -603,7 +605,7 @@ img {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   font-weight: normal;
-  font-size: 2.6rem;
+  font-size: 2rem;
   padding: 0.1em 0.4em;
   background: white;
   color: #1f1f1f;
@@ -644,15 +646,12 @@ img {
 
 .formation-label {
   position: absolute;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  top: 20px;
+  right: 20px;
   font-size: 24px;
   padding: .5em 1em;
   background-color: #161414;
   color: white;
-  top: 2vh;
   display: inline-block;
 }
 
@@ -663,7 +662,6 @@ img {
 .formation-442 {
   display: -ms-grid;
   display: grid;
-  gap: 2em;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas: "g d2 m6 ." "g d3 m7 f9" "g d4 m8 f10" "g d5 m11 .";
@@ -739,7 +737,6 @@ img {
 .formation-433 {
   display: -ms-grid;
   display: grid;
-  gap: 2em;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas: "g p2 p6 p9" "g p3 p7 p10" "g p4 p8 p11" "g p5 . .";
@@ -820,9 +817,10 @@ img {
 .formation-532 {
   display: -ms-grid;
   display: grid;
-  gap: 2em;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (20%)[5];
+      grid-template-rows: repeat(5, 20%);
       grid-template-areas: "g p2 . ." "g p3 p7 ." "g p4 p8 p10" "g p5 p9 p11" "g p6 . .";
 }
 
@@ -901,7 +899,6 @@ img {
 .formation-352 {
   display: -ms-grid;
   display: grid;
-  gap: 2em;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas: "g . p2 ." "g p3 p7 ." "g p4 p8 p10" "g p5 p9 p11" "g . p6 .";
@@ -982,7 +979,6 @@ img {
 .formation-4231 {
   display: -ms-grid;
   display: grid;
-  gap: 2em;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
       grid-template-areas: "g p2 . . ." "g p3 p6 p8 ." "g p4 p7 p9 p11" "g p5 . p10 .";

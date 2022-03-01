@@ -1,7 +1,7 @@
 .formation-532 {
    display: grid;
-   gap: 2em;
    grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(5, 20%);
    grid-template-areas: 
       "g p2 . ."
       "g p3 p7 ."
