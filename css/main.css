@@ -563,7 +563,6 @@ img {
 .pitch .pitch__img {
   position: absolute;
   width: 100%;
-  min-width: 1820px;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -577,8 +576,9 @@ img {
 }
 
 .pitch__player {
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
   position: relative;
@@ -600,7 +600,25 @@ img {
 
 @media (min-width: 1200px) {
   .pitch__player img {
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .pitch__player img {
     max-width: 130px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .pitch__player img {
+    max-width: 140px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .pitch__player img {
+    max-width: 150px;
   }
 }
 

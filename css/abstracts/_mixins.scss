@@ -32,4 +32,16 @@
    @if $point == 1300 {
     @media (min-width: 1300px) { @content; }
    }   
+   @if $point == 1400 {
+    @media (min-width: 1400px) { @content; }
+   }   
+   @if $point == 1500 {
+    @media (min-width: 1500px) { @content; }
+   }   
+   @if $point == 1600 {
+    @media (min-width: 1600px) { @content; }
+   }   
+   @if $point == 1700 {
+    @media (min-width: 1700px) { @content; }
+   }   
  }

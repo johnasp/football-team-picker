@@ -7,7 +7,6 @@
    .pitch__img {
       position: absolute;
       width: 100%;
-      min-width: 1820px;
       height: 100%;
       object-fit: cover;
    }
@@ -19,7 +18,7 @@
    max-width: 1820px;
 }
 .pitch__player {
-   align-self: baseline;
+   align-self: center;
    justify-self: center;
    position: relative;
    padding: 0.8em;
@@ -32,8 +31,18 @@
    img {
       max-width: 100px;
       @include breakpoint(1200) { 
+         max-width: 120px;
+      }
+      @include breakpoint(1300) { 
          max-width: 130px;
       }
+      @include breakpoint(1400) { 
+         max-width: 140px;
+      }
+      @include breakpoint(1500) { 
+         max-width: 150px;
+      }
+
    }
    &.over {
       border: 0.2em dashed rgba(255,255,255, 0.7);
