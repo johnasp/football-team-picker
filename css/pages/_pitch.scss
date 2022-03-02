@@ -31,6 +31,9 @@
    }
    img {
       max-width: 100px;
+      @include breakpoint(1200) { 
+         max-width: 130px;
+      }
    }
    &.over {
       border: 0.2em dashed rgba(255,255,255, 0.7);

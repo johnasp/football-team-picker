@@ -23,10 +23,13 @@
    @if $point == 992 {
      @media (min-width: 992px) { @content; }
    } 
+   @if $point == 1024 {
+    @media (min-width: 1024px) { @content; }
+   }
+   @if $point == 1200 {
+    @media (min-width: 1200px) { @content; }
+   }      
    @if $point == 1300 {
-     @media (min-width: 1300px) { @content; }
+    @media (min-width: 1300px) { @content; }
    }   
-   @else if $point == 1024 {
-     @media (min-width: 1024px) { @content; }
-   } 
  }

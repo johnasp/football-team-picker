@@ -391,8 +391,8 @@ img {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 250px 1fr;
-      grid-template-columns: 250px 1fr;
+  -ms-grid-columns: 220px 1fr;
+      grid-template-columns: 220px 1fr;
   height: 100vh;
   overflow: hidden;
 }
@@ -437,13 +437,15 @@ img {
 
 .controls header {
   font-size: 1.8rem;
-  padding: 0.6em;
+  padding: 0.6em 0.2em;
 }
 
 .controls header label {
   color: white;
-  font-weight: normal;
   font-size: inherit;
+  margin-bottom: 8px;
+  display: inline-block;
+  text-transform: uppercase;
 }
 
 .controls header select {
@@ -594,6 +596,12 @@ img {
 
 .pitch__player img {
   max-width: 100px;
+}
+
+@media (min-width: 1200px) {
+  .pitch__player img {
+    max-width: 130px;
+  }
 }
 
 .pitch__player.over {
