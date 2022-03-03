@@ -22,15 +22,15 @@ fetch('players.json')
       playersArr.sort((a, b) => {
          return a.positionKey - b.positionKey
      })
-      for (let i = 0; i < playersArr.length; i++ ) {
-         const shirtNumber = playersArr[i].shirtNumber
-         const playerName = playersArr[i].name
-         const position = playersArr[i].position.toLowerCase()
-         const positionKey = playersArr[i].positionKey
+      for (player of playersArr) {
+         const shirtNumber = player.shirtNumber
+         const playerName = player.name
+         const position = player.position.toLowerCase()
+         const positionKey = player.positionKey
          playerEl.innerHTML += 
             `<div class="controls__player ${position}" id="shirt-${shirtNumber}" draggable="true" >
-               <img class="player-shirt" src="images/pool-shirt.svg" alt="Blackpool FC shirt">
-               <p class="player-name" positionkey="${positionKey}"> ${playerName}</p>
+               <img class="player-shirt"  src="images/pool-shirt.svg" alt="Blackpool FC shirt">
+               <p class="player-name" squadid=${shirtNumber} positionkey="${positionKey}"> ${playerName}</p>
                <span class="player-squad-no">${shirtNumber}</span>
                <span class="player-position">- ${position}</span>
             </div>`
@@ -38,8 +38,8 @@ fetch('players.json')
    })  
    .then(function(){   // Attach drag handlers to players list
       const players = document.querySelectorAll('.controls__player')
-      for (let i = 0; i < players.length; i++) {
-         players[i].addEventListener('dragstart', dragStartHandler)
+      for (const player of players) {
+         player.addEventListener('dragstart', dragStartHandler)
       }
    })  
    .then(function(){   // Attach position labels above first position
@@ -60,13 +60,19 @@ function dragStartHandler(e){
 function dropHandler(e) {  // Actioms to perform when a shirt is dropped
    e.preventDefault()
    const playerData = e.dataTransfer.getData('text') // Store dragged player data payload
-   const playerHTML = new DOMParser().parseFromString(playerData, "text/html")  // Convert string to DOM element
+   const playerHTML = new DOMParser().parseFromString(playerData, "text/html")  // Convert string to DOM element\\
+
+   console.log(this.querySelector('p'))
 
    // STOP DUPLICATED PLAYERS BEING ALLOW ONTO THE PITCH
    // 1. Get an array of all the current team on the pitch, storing their squad ID as a value
+
    // 2. Get the squad ID of the player being dropped
+
    // 3. Compare the Squad ID of dropped player with all those in the current team array
+
    // 4. If the ID is matched, show an error modal and refuse the action
+   
    // 5. Otherwise allow the drop to happens
 
    // Check to see if the player is already on the pitch
@@ -85,7 +91,7 @@ function dropHandler(e) {  // Actioms to perform when a shirt is dropped
    }
    this.classList.remove('over')
    this.classList.add('active')
-   console.log(this)
+
 }
 function dragOverHandler(e) {
    e.preventDefault()
@@ -106,8 +112,8 @@ const teamGrid = document.querySelector('#pitch__team-grid')
 const formations = document.querySelectorAll('.controls__formation-btns button')
 const formationLabel = document.querySelector('.formation-label')
 
-for (let i = 0; i < formations.length; i++) {
-   formations[i].addEventListener('click', function(){
+for (const formation of formations) {
+   formation.addEventListener('click', function(){
       // Get the formation class from the button
       let btnFormation = this.classList.value
       // Change pitch__team-grid based on the formation class within the button
