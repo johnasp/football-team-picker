@@ -13,7 +13,7 @@ for (const pitchPlayer of pitchPlayers ) {
    pitchPlayer.addEventListener('drop', dropHandler)
 }
 
-// Render the players list
+// RENDER PLAYERS SIDEBAR LIST FROM JSON
 const playerEl = document.querySelector('.controls__players')
 fetch('players.json')
    .then(response => response.json()) // converts JSON from string to array
@@ -29,8 +29,8 @@ fetch('players.json')
          const positionKey = player.positionKey
          playerEl.innerHTML += 
             `<div class="controls__player ${position}" id="shirt-${shirtNumber}" draggable="true" >
-               <img class="player-shirt"  src="images/pool-shirt.svg" alt="Blackpool FC shirt">
-               <p class="player-name" squadid=${shirtNumber} positionkey="${positionKey}"> ${playerName}</p>
+               <img class="player-shirt" src="images/pool-shirt.svg" alt="Blackpool FC shirt">
+               <p class="player-name" positionkey="${positionKey}" squadno=${shirtNumber}> ${playerName}</p>
                <span class="player-squad-no">${shirtNumber}</span>
                <span class="player-position">- ${position}</span>
             </div>`
@@ -60,14 +60,19 @@ function dragStartHandler(e){
 function dropHandler(e) {  // Actioms to perform when a shirt is dropped
    e.preventDefault()
    const playerData = e.dataTransfer.getData('text') // Store dragged player data payload
-   const playerHTML = new DOMParser().parseFromString(playerData, "text/html")  // Convert string to DOM element\\
-
-   console.log(this.querySelector('p'))
+   const playerHTML = new DOMParser().parseFromString(playerData, "text/html")  // Convert string to DOM element
+   console.clear()
 
    // STOP DUPLICATED PLAYERS BEING ALLOW ONTO THE PITCH
-   // 1. Get an array of all the current team on the pitch, storing their squad ID as a value
+   // 1. Get squad numbers of all current players on the pitch, to be used in test
+   const playersOnPitch = document.querySelectorAll('.pitch__player.active')
+   for (const player of playersOnPitch) {
+      let current = player.querySelector('p')
+      console.log(current.getAttribute('squadno'))
+   }
 
    // 2. Get the squad ID of the player being dropped
+    //console.log(this.querySelector('p').getAttribute('squadno'))
 
    // 3. Compare the Squad ID of dropped player with all those in the current team array
 
@@ -75,11 +80,6 @@ function dropHandler(e) {  // Actioms to perform when a shirt is dropped
    
    // 5. Otherwise allow the drop to happens
 
-   // Check to see if the player is already on the pitch
-
-   // If he is isnt on the pitch, allow the drop
-
-   // If he IS already on the pitch, block the drop/do not allow it AND popup an error message
 
    const isGoalkeeper = playerHTML.body.children[1].getAttribute("positionkey")  // Grab the postion to use in GK test
    if ( isGoalkeeper == '1') { // If goalie, replace with GK shirt
