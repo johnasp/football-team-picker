@@ -64,11 +64,13 @@ function dropHandler(e) {  // Actioms to perform when a shirt is dropped
    console.clear()
 
    // STOP DUPLICATED PLAYERS BEING ALLOW ONTO THE PITCH
-   // 1. Get squad numbers of all current players on the pitch, to be used in test
+   // 1. Get squad numbers of all current players on the pitch and stuff into an
    const playersOnPitch = document.querySelectorAll('.pitch__player.active')
-   for (const player of playersOnPitch) {
-      let current = player.querySelector('p')
-      console.log(current.getAttribute('squadno'))
+   const playersPitchArr = []
+   for (const [index, player] of playersOnPitch.entries()) {
+      let current = player.querySelector('p').getAttribute('squadno')
+      playersPitchArr.push(current)
+      console.log(playersPitchArr[index])
    }
 
    // 2. Get the squad ID of the player being dropped
