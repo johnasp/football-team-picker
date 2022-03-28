@@ -64,44 +64,60 @@ function dropHandler(e) {  // Actioms to perform when a shirt is dropped
    console.clear()
 
    // STOP DUPLICATED PLAYERS BEING ALLOW ONTO THE PITCH
-   // 1. Get squad numbers of all current players on the pitch and stuff into an
+   // 1. Get squad numbers of all current players on the pitch and stuff into array
    const playersOnPitch = document.querySelectorAll('.pitch__player.active')
    const playersPitchArr = []
    for (const [index, player] of playersOnPitch.entries()) {
       let current = player.querySelector('p').getAttribute('squadno')
       playersPitchArr.push(current)
-      console.log(playersPitchArr[index])
    }
-
+   //console.log(playersPitchArr)
    // 2. Get the squad ID of the player being dropped
-    //console.log(this.querySelector('p').getAttribute('squadno'))
+   const playerDroppedSquadID = playerHTML.querySelector('.player-squad-no').textContent
+   //console.log(`PLayer dropped ID ${playerDroppedSquadID}`)
+   // 3. Compare the Squad ID of dropped player with all those in the current players on the pitch array
 
-   // 3. Compare the Squad ID of dropped player with all those in the current team array
-
-   // 4. If the ID is matched, show an error modal and refuse the action
-   
-   // 5. Otherwise allow the drop to happens
-
-
-   const isGoalkeeper = playerHTML.body.children[1].getAttribute("positionkey")  // Grab the postion to use in GK test
-   if ( isGoalkeeper == '1') { // If goalie, replace with GK shirt
-      const gk = playerData.replace('images/pool-shirt.svg','images/pool-shirt-gk.svg')
-      this.innerHTML = gk
-   }  
-   else {
-      this.innerHTML = playerData
+   let isPLayerDuplicated = false
+   for (player of playersPitchArr) {
+      if (player === playerDroppedSquadID ) {    // 4. If the  plyaer ID is already on pitch, show an error modal and refuse the action
+         isPLayerDuplicated = true
+         alert('Fuck you, hes already on the pitch, you cant the same player') 
+         this.classList.remove('over')
+         console.log(isPLayerDuplicated)
+         break
+      } 
+      else {
+         // RUN THE CODE BELOW
+      }
    }
-   this.classList.remove('over')
-   this.classList.add('active')
+
+      // THIS 
+      if (isPLayerDuplicated === false) {
+         const isGoalkeeper = playerHTML.body.children[1].getAttribute("positionkey")  // Grab the postion to use in GK test
+         if ( isGoalkeeper == '1') { // If goalie, replace with GK shirt
+            const gk = playerData.replace('images/pool-shirt.svg','images/pool-shirt-gk.svg')
+            this.innerHTML = gk
+         }  
+         else {
+            this.innerHTML = playerData
+         }
+         this.classList.remove('over')
+         this.classList.add('active')
+      }
+      // CODE
+
 
 }
+
 function dragOverHandler(e) {
    e.preventDefault()
    this.classList.add('over')
 }
+
 function dragEnterHandler(e) {
    e.preventDefault()
 }
+
 function dragLeaveHandler() {
    this.classList.remove('over')
 }

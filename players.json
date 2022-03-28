@@ -169,6 +169,12 @@
       "shirtNumber": 35,
       "position": "Defender",
       "positionKey": "2"
+    },
+    {
+      "name": "Aspinall",
+      "shirtNumber": 8,
+      "position": "Midfielder",
+      "positionKey": "3"
     }
 
   ]
