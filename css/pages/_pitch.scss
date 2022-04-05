@@ -60,7 +60,7 @@
       padding: 0.1em 0.4em;
       background: white;
       color: $col-black;
-      text-transform: uppercase;
+      text-transform: uppercase; 
       font-weight: bold;
       margin: 0;
       text-align: center;
@@ -69,7 +69,7 @@
    .player-squad-no {
       @include absCentre();
       color: white;
-      font-size: 3.2rem;
+      font-size: 2.6rem;
       font-weight: bold;
       margin: 0;
    }

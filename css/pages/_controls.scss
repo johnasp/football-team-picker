@@ -85,3 +85,20 @@
       }
    }
 }
+.hide {
+   display: none;
+}
+.hold {
+   border: none!important;
+   width: 100px;
+   span {
+      display: none;
+   }
+   p {
+      text-align: center;
+      font-size: 20px;
+   }
+   img {
+      display: block!important;
+   }
+}

@@ -40,6 +40,7 @@ fetch('players.json')
       const players = document.querySelectorAll('.controls__player')
       for (const player of players) {
          player.addEventListener('dragstart', dragStartHandler)
+         player.addEventListener('dragend', dragEndHandler)
       }
    })  
    .then(function(){   // Attach position labels above first position
@@ -54,58 +55,56 @@ fetch('players.json')
    })  
   
 function dragStartHandler(e){
-   e.dataTransfer.setData('text', e.target.innerHTML) // Set data payload to transfer
+   e.dataTransfer.setData('text', e.target.innerHTML)  // Set data payload to transfer
+   this.classList.toggle('hold')
+   setTimeout(() => this.classList.toggle('hide'), 0.1)
+   console.log('drag start fired')
 }
 
-function dropHandler(e) {  // Actioms to perform when a shirt is dropped
+function dragEndHandler(){
+   this.classList.toggle('hold')
+   this.classList.toggle('hide')
+   console.log('drag end fired')
+}
+
+function dropHandler(e) {  // PLAYER DROP ACTIONS
    e.preventDefault()
    const playerData = e.dataTransfer.getData('text') // Store dragged player data payload
    const playerHTML = new DOMParser().parseFromString(playerData, "text/html")  // Convert string to DOM element
-   console.clear()
+
 
    // STOP DUPLICATED PLAYERS BEING ALLOW ONTO THE PITCH
-   // 1. Get squad numbers of all current players on the pitch and stuff into array
+   // 1. Get squad numbers of all current players on the pitch into an array
    const playersOnPitch = document.querySelectorAll('.pitch__player.active')
    const playersPitchArr = []
    for (const [index, player] of playersOnPitch.entries()) {
       let current = player.querySelector('p').getAttribute('squadno')
       playersPitchArr.push(current)
    }
-   //console.log(playersPitchArr)
    // 2. Get the squad ID of the player being dropped
    const playerDroppedSquadID = playerHTML.querySelector('.player-squad-no').textContent
-   //console.log(`PLayer dropped ID ${playerDroppedSquadID}`)
    // 3. Compare the Squad ID of dropped player with all those in the current players on the pitch array
-
    let isPLayerDuplicated = false
    for (player of playersPitchArr) {
       if (player === playerDroppedSquadID ) {    // 4. If the  plyaer ID is already on pitch, show an error modal and refuse the action
          isPLayerDuplicated = true
-         alert('Fuck you, hes already on the pitch, you cant the same player') 
+         alert('This player is already on the pitch, you cannot add him again.') 
          this.classList.remove('over')
-         console.log(isPLayerDuplicated)
          break
       } 
-      else {
-         // RUN THE CODE BELOW
-      }
    }
-
-      // THIS 
-      if (isPLayerDuplicated === false) {
-         const isGoalkeeper = playerHTML.body.children[1].getAttribute("positionkey")  // Grab the postion to use in GK test
-         if ( isGoalkeeper == '1') { // If goalie, replace with GK shirt
-            const gk = playerData.replace('images/pool-shirt.svg','images/pool-shirt-gk.svg')
-            this.innerHTML = gk
-         }  
-         else {
-            this.innerHTML = playerData
-         }
-         this.classList.remove('over')
-         this.classList.add('active')
+   if (isPLayerDuplicated === false) {
+      const isGoalkeeper = playerHTML.body.children[1].getAttribute("positionkey")  // Grab the postion to use in GK test
+      if ( isGoalkeeper == '1') { // If goalie, replace with GK shirt
+         const gk = playerData.replace('images/pool-shirt.svg','images/pool-shirt-gk.svg')
+         this.innerHTML = gk
+      }  
+      else {
+         this.innerHTML = playerData
       }
-      // CODE
-
+      this.classList.remove('over')
+      this.classList.add('active')
+   }
 
 }
 
