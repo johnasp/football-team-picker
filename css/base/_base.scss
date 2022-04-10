@@ -44,7 +44,7 @@ img {
 }
 .container {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: min-content auto;
   height: 100vh;
   overflow: hidden;
 }

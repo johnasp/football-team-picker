@@ -391,8 +391,9 @@ img {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 220px 1fr;
-      grid-template-columns: 220px 1fr;
+  -ms-grid-columns: min-content auto;
+      grid-template-columns: -webkit-min-content auto;
+      grid-template-columns: min-content auto;
   height: 100vh;
   overflow: hidden;
 }
@@ -432,7 +433,6 @@ img {
 
 .controls {
   overflow: auto;
-  background: #ff7100;
 }
 
 .controls header {
@@ -480,6 +480,37 @@ img {
 
 .controls__player .player-shirt {
   display: none;
+}
+
+.controls__player.hold {
+  border: none !important;
+  background: transparent !important;
+  overflow: hidden;
+}
+
+.controls__player.hold .player-position {
+  display: none;
+}
+
+.controls__player.hold .player-name {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  padding: 6px;
+  background: #00000057;
+  color: aliceblue;
+}
+
+.controls__player.hold .player-squad-no {
+  display: none;
+}
+
+.controls__player.hold img {
+  display: block;
+  width: 100px;
 }
 
 .controls__player .player-name {
@@ -545,24 +576,6 @@ img {
 
 .hide {
   display: none;
-}
-
-.hold {
-  border: none !important;
-  width: 100px;
-}
-
-.hold span {
-  display: none;
-}
-
-.hold p {
-  text-align: center;
-  font-size: 20px;
-}
-
-.hold img {
-  display: block !important;
 }
 
 .pitch {
@@ -657,7 +670,7 @@ img {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
   font-weight: normal;
   font-size: 2.6rem;
   padding: 0.1em 0.4em;
@@ -676,6 +689,8 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   color: white;
   font-size: 2.6rem;
   font-weight: bold;
