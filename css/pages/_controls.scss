@@ -6,6 +6,7 @@
    header {
       font-size: 1.8rem;
       padding: 0.6em 0.2em;
+      background: #000;
       label {
          color: white;
          font-size: inherit;
@@ -52,20 +53,18 @@
          }
          .player-name {
             margin: 0;
-            bottom: 0;
-            padding: 3 6px;
-            background: #000000b9;
-            color: aliceblue;
-            width: 100%;
-            position: absolute;
-            text-align: center;
+            padding: 3px 6px;
+            background: white;
+            border-radius: 2px;
+            flex-grow: 0;
+            flex-basis: auto;
          }
          .player-squad-no {
             display: none;
          }
          img {
             display: block;
-            width: 100px;
+            min-width: 130px;
          }
       }
       .player-name {
@@ -93,12 +92,22 @@
       }
 }
 .controls__formations {
-   div {
+   background: #252525;
+   padding: 1em 0.5em;
+   .controls__formations-label {
+      color: white;
+      margin: 0 0 8px 0;
+      text-align: center;
+      margin-bottom: 8px;
+      font-size: 20px;
+   }
+   .controls__formation-btns {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       gap: 10px;      
+      min-width: 142px;
    }
    button {
       font-size: 1.6rem;
@@ -106,8 +115,6 @@
       border: none;
       background: white;
       padding: .3em .6em;
-      border-bottom: 2px solid rgb(207, 100, 0);
-      border-right: 2px solid rgb(207, 100, 0);
       &:hover {
          cursor: pointer;
          background: rgba(226, 226, 226, 0.9);

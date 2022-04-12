@@ -57,7 +57,7 @@
       @include absCentreHorizontal(); 
       font-weight: normal;
       font-size: 2.6rem;
-      padding: 0.1em 0.4em;
+      padding: 0 0.3em;
       background: white;
       color: $col-black;
       text-transform: uppercase; 
@@ -65,9 +65,10 @@
       margin: 0;
       text-align: center;
       display: none;
+      border-radius: 2px;
    }
    .player-squad-no {
-      color: white;
+      color: #ffffffbd;
       font-size: 2.6rem;
       font-weight: bold;
       margin: 0;
