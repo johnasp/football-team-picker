@@ -67,11 +67,11 @@
       display: none;
    }
    .player-squad-no {
-      @include absCentre();
       color: white;
       font-size: 2.6rem;
       font-weight: bold;
       margin: 0;
+      @include absCentred();
    }
    .player-position {
       display: none;

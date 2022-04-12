@@ -57,7 +57,7 @@ fetch('players.json')
 function dragStartHandler(e){
    e.dataTransfer.setData('text', e.target.innerHTML)  // Set data payload to transfer
    this.classList.toggle('hold')
-   setTimeout(() => this.classList.toggle('hide'), 0.1)
+   setTimeout(() => this.classList.toggle('hide'), 2)
    console.log('drag start fired')
 }
 
