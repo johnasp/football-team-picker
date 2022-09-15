@@ -33,12 +33,6 @@
       "positionKey": "3"
     },
     {
-      "name": "Dale",
-      "shirtNumber": 7,
-      "position": "Midfield",
-      "positionKey": "3"
-    },
-    {
       "name": "Fiorini",
       "shirtNumber": 8,
       "position": "Midfield",
@@ -53,12 +47,6 @@
     {
       "name": "Anderson",
       "shirtNumber": 10,
-      "position": "Forward",
-      "positionKey": "4"
-    },
-    {
-      "name": "Bowler",
-      "shirtNumber": 11,
       "position": "Forward",
       "positionKey": "4"
     },
@@ -111,12 +99,6 @@
       "positionKey": "2"
     },
     {
-      "name": "Patino",
-      "shirtNumber": 53,
-      "position": "Midfield",
-      "positionKey": "3"
-    },
-    {
       "name": "Thompson",
       "shirtNumber": 23,
       "position": "Defender",
@@ -129,6 +111,12 @@
       "positionKey": "4"
     },
     {
+      "name": "Wright",
+      "shirtNumber": 24,
+      "position": "Midfiled",
+      "positionKey": "4"
+    },   
+    {
       "name": "Corbeanu",
       "shirtNumber": 25,
       "position": "Forward",
@@ -137,18 +125,18 @@
     {
       "name": "Keogh",
       "shirtNumber": 26,
-      "position": "Defender",
-      "positionKey": "2"
-    },
-    {
-      "name": "Beesley",
-      "shirtNumber": 28,
       "position": "Forward",
       "positionKey": "4"
     },
     {
-      "name": "Lubala",
-      "shirtNumber": 30,
+      "name": "Patino",
+      "shirtNumber": 28,
+      "position": "Midfield",
+      "positionKey": "3"
+    },
+    {
+      "name": "Beesley",
+      "shirtNumber": 28,
       "position": "Forward",
       "positionKey": "4"
     },
@@ -163,12 +151,6 @@
       "shirtNumber": 32,
       "position": "Goalkeeper",
       "positionKey": "1"
-    },
-    {
-      "name": "Tharme",
-      "shirtNumber": 33,
-      "position": "Defender",
-      "positionKey": "2"
     },
     {
       "name": "Thorniley",
