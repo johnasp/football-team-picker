@@ -114,7 +114,7 @@
       "name": "Wright",
       "shirtNumber": 24,
       "position": "Midfiled",
-      "positionKey": "4"
+      "positionKey": "3"
     },   
     {
       "name": "Corbeanu",
@@ -123,7 +123,7 @@
       "positionKey": "4"
     },
     {
-      "name": "Keogh",
+      "name": "Poveda",
       "shirtNumber": 26,
       "position": "Forward",
       "positionKey": "4"
@@ -157,12 +157,6 @@
       "shirtNumber": 34,
       "position": "Defender",
       "positionKey": "2"
-    },
-    {
-      "name": "Apter",
-      "shirtNumber": 36,
-      "position": "Midfield",
-      "positionKey": "3"
     }
   ]
 }
