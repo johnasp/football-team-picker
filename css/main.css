@@ -431,26 +431,26 @@ img {
   display: none !important;
 }
 
-.fixture {
+.fixture-banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 0;
+  z-index: 9;
+  padding: 10px 20px;
 }
 
-.fixture img {
+.fixture-banner img {
   height: 100px;
   width: auto;
 }
 
-.fixture p {
-  color: #fff;
-}
-
-.fixture .fixture__versus {
+.fixture-banner .fixture__versus {
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -458,6 +458,8 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 40px;
+  margin: 0 20px;
 }
 
 .controls {
