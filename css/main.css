@@ -431,6 +431,35 @@ img {
   display: none !important;
 }
 
+.fixture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #000;
+}
+
+.fixture img {
+  height: 100px;
+  width: auto;
+}
+
+.fixture p {
+  color: #fff;
+}
+
+.fixture .fixture__versus {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .controls {
   overflow: auto;
   overflow-y: scroll;
