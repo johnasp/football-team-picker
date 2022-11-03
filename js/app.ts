@@ -15,7 +15,7 @@ for (const pitchPlayer of pitchPlayers ) {
 
 // RENDER PLAYERS SIDEBAR LIST FROM JSON
 const playerEl = document.querySelector('.controls__players')
-fetch('players.json')
+fetch('json/players.json')
    .then(response => response.json()) // converts JSON from string to array
    .then(data => { 
       const playersArr = data.players // Sort players array into positions

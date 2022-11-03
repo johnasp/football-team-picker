@@ -13,7 +13,7 @@ for (var _i = 0, pitchPlayers_1 = pitchPlayers; _i < pitchPlayers_1.length; _i++
 }
 // RENDER PLAYERS SIDEBAR LIST FROM JSON
 var playerEl = document.querySelector('.controls__players');
-fetch('players.json')
+fetch('json/players.json')
     .then(function (response) { return response.json(); }) // converts JSON from string to array
     .then(function (data) {
     var playersArr = data.players; // Sort players array into positions
