@@ -163,6 +163,12 @@
       "shirtNumber": 35,
       "position": "Midfield",
       "positionKey": "2"
+    },
+    {
+      "name": "Ward",
+      "shirtNumber": 27,
+      "position": "Midfield",
+      "positionKey": "2"
     }
   ]
 }
