@@ -1,2 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("assets/css/main.css"); /* Using a string */
+
+.formation-label {
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   font-size: 24px;
+   padding: .5em 1em ;
+   background-color: red;
+   color: white;
+   display: inline-block;
+   p {
+      margin: 0;
+   }
+}
