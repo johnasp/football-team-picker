@@ -576,12 +576,13 @@ img {
   font-size: 12px;
 }
 
-.controls__player:hover {
-  cursor: pointer;
-}
-
 .controls__player:nth-child(odd) {
   background: #fff7ef;
+}
+
+.controls__player:hover {
+  cursor: pointer;
+  background: #fddcb7;
 }
 
 .controls__formations {

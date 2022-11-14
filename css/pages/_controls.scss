@@ -84,11 +84,12 @@
       .player-position {
          font-size: 12px;
       }
-      &:hover {
-         cursor: pointer;
-      }
       &:nth-child(odd) {
          background: $tertiary;
+      }
+      &:hover {
+         cursor: pointer;
+         background: darken($secondary, 7%);
       }
 }
 .controls__formations {
