@@ -27,6 +27,12 @@
       "positionKey": "2"
     },
     {
+      "name": "Lyons",
+      "shirtNumber": 5,
+      "position": "Defender",
+      "positionKey": "2"
+    },
+    {
       "name": "Stewart",
       "shirtNumber": 6,
       "position": "Midfield",
@@ -49,6 +55,12 @@
       "shirtNumber": 10,
       "position": "Forward",
       "positionKey": "4"
+    },
+    {
+      "name": "Bowler",
+      "shirtNumber": 11,
+      "position": "Midfield",
+      "positionKey": "3"
     },
     {
       "name": "Dougall",
@@ -81,12 +93,6 @@
       "positionKey": "3"
     },
     {
-      "name": "Virtue",
-      "shirtNumber": 17,
-      "position": "Midfield",
-      "positionKey": "3"
-    },
-    {
       "name": "Lavery",
       "shirtNumber": 19,
       "position": "Forward",
@@ -109,22 +115,16 @@
       "shirtNumber": 22,
       "position": "Forward",
       "positionKey": "4"
-    },
+    },  
     {
-      "name": "Wright",
-      "shirtNumber": 24,
-      "position": "Midfiled",
-      "positionKey": "3"
-    },   
-    {
-      "name": "Corbeanu",
-      "shirtNumber": 25,
+      "name": "Poveda",
+      "shirtNumber": 26,
       "position": "Forward",
       "positionKey": "4"
     },
     {
-      "name": "Poveda",
-      "shirtNumber": 26,
+      "name": "Rogers",
+      "shirtNumber": 27,
       "position": "Forward",
       "positionKey": "4"
     },
@@ -136,7 +136,7 @@
     },
     {
       "name": "Beesley",
-      "shirtNumber": 28,
+      "shirtNumber": 18,
       "position": "Forward",
       "positionKey": "4"
     },
