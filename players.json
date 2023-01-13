@@ -159,6 +159,12 @@
       "positionKey": "2"
     },
     {
+      "name": "Trybull",
+      "shirtNumber": 24,
+      "position": "Defender",
+      "positionKey": "2"
+    },
+    {
       "name": "Bridcutt",
       "shirtNumber": 35,
       "position": "Midfield",
