@@ -105,6 +105,13 @@
       "positionKey": "2"
     },
     {
+      "name": "Nelson",
+      "shirtNumber": 22,
+      "position": "Defender",
+      "positionKey": "2"
+    },
+
+    {
       "name": "Thompson",
       "shirtNumber": 23,
       "position": "Defender",
