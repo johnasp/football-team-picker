@@ -12,6 +12,7 @@
          font-size: inherit;
          margin-bottom: 8px;
          display: inline-block;
+         text-transform: uppercase;
       }
       select {
          width: 100%;
@@ -33,10 +34,10 @@
    width: 100%;
    font-size: 12px;
    padding: 4px;
-   text-transform: capitalize;
+   text-transform: uppercase;
 }
 .controls__player {
-      text-transform: ;
+      text-transform: capitalize;
       background: $secondary;
       position: relative;
       display: flex;

@@ -428,6 +428,7 @@ img {
   font-size: inherit;
   margin-bottom: 8px;
   display: inline-block;
+  text-transform: uppercase;
 }
 .controls header select {
   width: 100%;
@@ -453,7 +454,7 @@ img {
 }
 
 .controls__player {
-  text-transform: uppercase;
+  text-transform: capitalize;
   background: #feedda;
   position: relative;
   display: flex;
