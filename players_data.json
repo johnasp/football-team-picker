@@ -1,0 +1,148 @@
+{
+  "players": [
+    {
+      "name": "Richard O'Donnell",
+      "shirtNumber": "1",
+      "position": "goalkeeper",
+      "positionKey": "1"
+    },
+    {
+      "name": "Mackenzie Chapman",
+      "shirtNumber": "13",
+      "position": "goalkeeper",
+      "positionKey": "1"
+    },
+    {
+      "name": "Daniel Grimshaw",
+      "shirtNumber": "32",
+      "position": "goalkeeper",
+      "positionKey": "1"
+    },
+    {
+      "name": "Callum Connolly",
+      "shirtNumber": "2",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "James Husband",
+      "shirtNumber": "3",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Jordan Gabriel",
+      "shirtNumber": "4",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Matthew Pennington",
+      "shirtNumber": "5",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Oliver Casey",
+      "shirtNumber": "20",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Marvin Ekpiteta",
+      "shirtNumber": "21",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Dominic Thompson",
+      "shirtNumber": "23",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Andy Lyons",
+      "shirtNumber": "24",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Doug Tharme",
+      "shirtNumber": "33",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Oliver Norburn",
+      "shirtNumber": "6",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Owen Dale",
+      "shirtNumber": "7",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Albie Morgan",
+      "shirtNumber": "8",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Kenneth Dougall",
+      "shirtNumber": "12",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Sonny Carey",
+      "shirtNumber": "16",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Matty Virtue",
+      "shirtNumber": "17",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Christopher Hamilton",
+      "shirtNumber": "22",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Rob Apter",
+      "shirtNumber": "36",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Tom Trybull",
+      "shirtNumber": "46",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Jake Beesley",
+      "shirtNumber": "18",
+      "position": "forward",
+      "positionKey": "4"
+    },
+    {
+      "name": "Shayne Lavery",
+      "shirtNumber": "19",
+      "position": "forward",
+      "positionKey": "4"
+    },
+    {
+      "name": "Kyle Joseph",
+      "shirtNumber": null,
+      "position": "forward",
+      "positionKey": "4"
+    }
+  ]
+}

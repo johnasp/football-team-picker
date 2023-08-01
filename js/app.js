@@ -1,6 +1,6 @@
 "use script";
 // ---------------------
-// Drag and drop 
+// Drag and drop
 // ---------------------
 // Attach drag/drop listeners to pitch players
 var pitchPlayers = document.querySelectorAll('.pitch__player');
@@ -13,7 +13,7 @@ for (var _i = 0, pitchPlayers_1 = pitchPlayers; _i < pitchPlayers_1.length; _i++
 }
 // RENDER PLAYERS SIDEBAR LIST FROM JSON
 var playerEl = document.querySelector('.controls__players');
-fetch('players.json')
+fetch('players_data.json')
     .then(function (response) { return response.json(); }) // converts JSON from string to array
     .then(function (data) {
     var playersArr = data.players; // Sort players array into positions

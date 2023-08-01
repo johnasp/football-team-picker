@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display JSON data with JavaScript</title>
+  </head>
+  <body>
+    <div id="json-data"></div>
+    <script>
+      // Use the Fetch API to load the JSON file
+      fetch('podcast.json')
+        .then(response => response.json())
+        .then(data => {
+          // Create a string with the formatted JSON data
+          const jsonStr = JSON.stringify(data, null, 2);
+          
+          // Display the JSON data in a <pre> element on the page
+          const jsonDataElem = document.getElementById('json-data');
+          jsonDataElem.innerHTML = '<pre>' + jsonStr + '</pre>';
+        })
+        .catch(error => console.error(error));
+    </script>
+  </body>
+</html>
