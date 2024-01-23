@@ -1,19 +1,19 @@
 {
   "players": [
     {
-      "name": "Richard O'Donnell",
+      "name": "Rich O'Donnell",
       "shirtNumber": "1",
       "position": "goalkeeper",
       "positionKey": "1"
     },
     {
-      "name": "ffdfdcgfgfg Chapman",
+      "name": "Mackenzie Chapman",
       "shirtNumber": "13",
       "position": "goalkeeper",
       "positionKey": "1"
     },
     {
-      "name": "Daniel Grimshaw",
+      "name": "Dan Grimshaw",
       "shirtNumber": "32",
       "position": "goalkeeper",
       "positionKey": "1"
@@ -37,8 +37,14 @@
       "positionKey": "2"
     },
     {
-      "name": "Matthew Pennington",
+      "name": "Matt Pennington",
       "shirtNumber": "5",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Hayden Coulson",
+      "shirtNumber": "15",
       "position": "defender",
       "positionKey": "2"
     },
@@ -55,7 +61,7 @@
       "positionKey": "2"
     },
     {
-      "name": "Dominic Thompson",
+      "name": "Dom Thompson",
       "shirtNumber": "23",
       "position": "defender",
       "positionKey": "2"
@@ -91,14 +97,20 @@
       "positionKey": "3"
     },
     {
-      "name": "Kenneth Dougall",
-      "shirtNumber": "12",
+      "name": "Sonny Carey",
+      "shirtNumber": "10",
       "position": "midfielder",
       "positionKey": "3"
     },
     {
-      "name": "Sonny Carey",
-      "shirtNumber": "16",
+      "name": "Karamoko Dembele",
+      "shirtNumber": "11",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Kenny Dougall",
+      "shirtNumber": "12",
       "position": "midfielder",
       "positionKey": "3"
     },
@@ -109,22 +121,28 @@
       "positionKey": "3"
     },
     {
-      "name": "Christopher Hamilton",
+      "name": "CJ Hamilton",
       "shirtNumber": "22",
       "position": "midfielder",
       "positionKey": "3"
     },
     {
-      "name": "Rob Apter",
-      "shirtNumber": "36",
+      "name": "Tashan Oakley-Boothe",
+      "shirtNumber": "30",
       "position": "midfielder",
       "positionKey": "3"
     },
     {
-      "name": "Tom Trybull",
-      "shirtNumber": "46",
-      "position": "midfielder",
-      "positionKey": "3"
+      "name": "Kyle Joseph",
+      "shirtNumber": "9",
+      "position": "forward",
+      "positionKey": "4"
+    },
+    {
+      "name": "Jordan Rhodes",
+      "shirtNumber": "16",
+      "position": "forward",
+      "positionKey": "4"
     },
     {
       "name": "Jake Beesley",
@@ -139,8 +157,8 @@
       "positionKey": "4"
     },
     {
-      "name": "Kyle Joseph",
-      "shirtNumber": null,
+      "name": "Kylian Kouassi",
+      "shirtNumber": "27",
       "position": "forward",
       "positionKey": "4"
     }
