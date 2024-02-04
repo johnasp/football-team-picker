@@ -1,0 +1,21 @@
+.fixture-banner {
+   display: flex;
+   justify-content: center;
+   background: rgba(0, 0, 0, 0.8);
+   position: absolute;
+   top: 12px;
+   right: 12px;
+   z-index: 9;
+   padding: 10px 20px;
+   border-radius: 8px;
+   img {
+      height: 100px;
+      width: auto;
+   }
+   .fixture__versus {
+      color: white;
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+      margin: 0 20px;font-weight: bold;   }
+}

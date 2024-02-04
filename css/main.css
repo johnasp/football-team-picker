@@ -394,11 +394,13 @@ img {
 .fixture-banner {
   display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
-  right: 0;
+  top: 12px;
+  right: 12px;
   z-index: 9;
   padding: 10px 20px;
+  border-radius: 8px;
 }
 .fixture-banner img {
   height: 100px;
@@ -408,8 +410,9 @@ img {
   color: white;
   display: flex;
   align-items: center;
-  font-size: 40px;
+  font-size: 30px;
   margin: 0 20px;
+  font-weight: bold;
 }
 
 .controls {
