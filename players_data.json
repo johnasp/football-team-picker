@@ -61,20 +61,14 @@
       "positionKey": "2"
     },
     {
-      "name": "Dom Thompson",
-      "shirtNumber": "23",
-      "position": "defender",
-      "positionKey": "2"
-    },
-    {
       "name": "Andy Lyons",
       "shirtNumber": "24",
       "position": "defender",
       "positionKey": "2"
     },
     {
-      "name": "Doug Tharme",
-      "shirtNumber": "33",
+      "name": "Dan Sassi",
+      "shirtNumber": "34",
       "position": "defender",
       "positionKey": "2"
     },
@@ -85,7 +79,7 @@
       "positionKey": "3"
     },
     {
-      "name": "Owen Dale",
+      "name": "George Byers",
       "shirtNumber": "7",
       "position": "midfielder",
       "positionKey": "3"
@@ -109,12 +103,6 @@
       "positionKey": "3"
     },
     {
-      "name": "Kenny Dougall",
-      "shirtNumber": "12",
-      "position": "midfielder",
-      "positionKey": "3"
-    },
-    {
       "name": "Matty Virtue",
       "shirtNumber": "17",
       "position": "midfielder",
@@ -127,8 +115,8 @@
       "positionKey": "3"
     },
     {
-      "name": "Tashan Oakley-Boothe",
-      "shirtNumber": "30",
+      "name": "Ryan Finnigan",
+      "shirtNumber": "28",
       "position": "midfielder",
       "positionKey": "3"
     },

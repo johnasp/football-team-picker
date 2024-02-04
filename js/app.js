@@ -42,7 +42,7 @@ fetch('players_data.json')
     .then(function () {
     var firstGK = document.querySelector('.controls__players .goalkeeper');
     var firstDF = document.querySelector('.controls__players .defender');
-    var firstMF = document.querySelector('.controls__players .midfield');
+    var firstMF = document.querySelector('.controls__players .midfielder');
     var firstFW = document.querySelector('.controls__players .forward');
     firstGK.insertAdjacentHTML('beforebegin', '<div class="position-label">Goalkeepers</div>');
     firstDF.insertAdjacentHTML('beforebegin', '<div class="position-label">Defenders</div>');
