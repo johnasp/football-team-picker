@@ -19,7 +19,7 @@
       "positionKey": "1"
     },
     {
-      "name": "Callum Connolly",
+      "name": "Andy Lyons",
       "shirtNumber": "2",
       "position": "defender",
       "positionKey": "2"
@@ -43,6 +43,12 @@
       "positionKey": "2"
     },
     {
+      "name": "Elkan Baggott",
+      "shirtNumber": "12",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
       "name": "Hayden Coulson",
       "shirtNumber": "15",
       "position": "defender",
@@ -55,14 +61,14 @@
       "positionKey": "2"
     },
     {
-      "name": "Marvin Ekpiteta",
-      "shirtNumber": "21",
+      "name": "Dom Thompson",
+      "shirtNumber": "23",
       "position": "defender",
       "positionKey": "2"
     },
     {
-      "name": "Andy Lyons",
-      "shirtNumber": "24",
+      "name": "Zac Ashworth",
+      "shirtNumber": "26",
       "position": "defender",
       "positionKey": "2"
     },
@@ -79,7 +85,7 @@
       "positionKey": "3"
     },
     {
-      "name": "George Byers",
+      "name": "Lee Evans",
       "shirtNumber": "7",
       "position": "midfielder",
       "positionKey": "3"
@@ -97,20 +103,20 @@
       "positionKey": "3"
     },
     {
-      "name": "Karamoko Dembele",
-      "shirtNumber": "11",
-      "position": "midfielder",
-      "positionKey": "3"
-    },
-    {
-      "name": "Matty Virtue",
-      "shirtNumber": "17",
+      "name": "Elliot Embleton",
+      "shirtNumber": "14",
       "position": "midfielder",
       "positionKey": "3"
     },
     {
       "name": "CJ Hamilton",
       "shirtNumber": "22",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Rob Apter",
+      "shirtNumber": "25",
       "position": "midfielder",
       "positionKey": "3"
     },
@@ -127,6 +133,12 @@
       "positionKey": "4"
     },
     {
+      "name": "Ash Fletcher",
+      "shirtNumber": "11",
+      "position": "forward",
+      "positionKey": "4"
+    },
+    {
       "name": "Jordan Rhodes",
       "shirtNumber": "16",
       "position": "forward",
@@ -135,12 +147,6 @@
     {
       "name": "Jake Beesley",
       "shirtNumber": "18",
-      "position": "forward",
-      "positionKey": "4"
-    },
-    {
-      "name": "Shayne Lavery",
-      "shirtNumber": "19",
       "position": "forward",
       "positionKey": "4"
     },
