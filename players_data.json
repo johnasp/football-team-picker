@@ -13,12 +13,6 @@
       "positionKey": "1"
     },
     {
-      "name": "Dan Grimshaw",
-      "shirtNumber": "32",
-      "position": "goalkeeper",
-      "positionKey": "1"
-    },
-    {
       "name": "Andy Lyons",
       "shirtNumber": "2",
       "position": "defender",
@@ -75,6 +69,12 @@
     {
       "name": "Dan Sassi",
       "shirtNumber": "34",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Jack Moore",
+      "shirtNumber": "41",
       "position": "defender",
       "positionKey": "2"
     },
@@ -147,6 +147,12 @@
     {
       "name": "Jake Beesley",
       "shirtNumber": "18",
+      "position": "forward",
+      "positionKey": "4"
+    },
+    {
+      "name": "Dom Ballard",
+      "shirtNumber": "19",
       "position": "forward",
       "positionKey": "4"
     },
