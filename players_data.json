@@ -13,6 +13,12 @@
       "positionKey": "1"
     },
     {
+      "name": "Harry Tyrer",
+      "shirtNumber": "30",
+      "position": "goalkeeper",
+      "positionKey": "1"
+    },
+    {
       "name": "Andy Lyons",
       "shirtNumber": "2",
       "position": "defender",
@@ -61,20 +67,14 @@
       "positionKey": "2"
     },
     {
+      "name": "Odeluga Offiah",
+      "shirtNumber": "24",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
       "name": "Zac Ashworth",
       "shirtNumber": "26",
-      "position": "defender",
-      "positionKey": "2"
-    },
-    {
-      "name": "Dan Sassi",
-      "shirtNumber": "34",
-      "position": "defender",
-      "positionKey": "2"
-    },
-    {
-      "name": "Jack Moore",
-      "shirtNumber": "41",
       "position": "defender",
       "positionKey": "2"
     },
@@ -153,12 +153,6 @@
     {
       "name": "Dom Ballard",
       "shirtNumber": "19",
-      "position": "forward",
-      "positionKey": "4"
-    },
-    {
-      "name": "Kylian Kouassi",
-      "shirtNumber": "27",
       "position": "forward",
       "positionKey": "4"
     }
