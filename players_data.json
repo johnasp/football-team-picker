@@ -61,28 +61,10 @@
       "positionKey": "2"
     },
     {
-      "name": "Dom Thompson",
-      "shirtNumber": "23",
-      "position": "defender",
-      "positionKey": "2"
-    },
-    {
       "name": "Odeluga Offiah",
       "shirtNumber": "24",
       "position": "defender",
       "positionKey": "2"
-    },
-    {
-      "name": "Zac Ashworth",
-      "shirtNumber": "26",
-      "position": "defender",
-      "positionKey": "2"
-    },
-    {
-      "name": "Oliver Norburn",
-      "shirtNumber": "6",
-      "position": "midfielder",
-      "positionKey": "3"
     },
     {
       "name": "Lee Evans",
@@ -103,8 +85,14 @@
       "positionKey": "3"
     },
     {
-      "name": "Elliot Embleton",
-      "shirtNumber": "14",
+      "name": "Josh Onomah",
+      "shirtNumber": "17",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Sammy Silvera",
+      "shirtNumber": "19",
       "position": "midfielder",
       "positionKey": "3"
     },
@@ -127,20 +115,14 @@
       "positionKey": "3"
     },
     {
-      "name": "Kyle Joseph",
-      "shirtNumber": "9",
-      "position": "forward",
-      "positionKey": "4"
-    },
-    {
       "name": "Ash Fletcher",
       "shirtNumber": "11",
       "position": "forward",
       "positionKey": "4"
     },
     {
-      "name": "Jordan Rhodes",
-      "shirtNumber": "16",
+      "name": "Tom Bloxham",
+      "shirtNumber": "14",
       "position": "forward",
       "positionKey": "4"
     },
@@ -151,8 +133,8 @@
       "positionKey": "4"
     },
     {
-      "name": "Dom Ballard",
-      "shirtNumber": "19",
+      "name": "Niall Ennis",
+      "shirtNumber": "21",
       "position": "forward",
       "positionKey": "4"
     }
