@@ -8,121 +8,145 @@
     },
     {
       "name": "Franco Ravizzoli",
-      "shirtNumber": "2",
+      "shirtNumber": "25",
       "position": "goalkeeper",
       "positionKey": "1"
     },
     {
-      "name": "Oliver Casey",
-      "shirtNumber": "3",
-      "position": "defender",
-      "positionKey": "2"
-    },
-    {
-      "name": "Fraser Horsfall",
-      "shirtNumber": "4",
-      "position": "defender",
-      "positionKey": "2"
-    },
-    {
-      "name": "Michael Ihiekwe",
-      "shirtNumber": "5",
-      "position": "defender",
-      "positionKey": "2"
-    },
-    {
-      "name": "Dan Sassi",
-      "shirtNumber": "6",
-      "position": "defender",
-      "positionKey": "2"
-    },
-    {
-      "name": "Hayden Coulson",
-      "shirtNumber": "7",
+      "name": "Andy Lyons",
+      "shirtNumber": "2",
       "position": "defender",
       "positionKey": "2"
     },
     {
       "name": "James Husband",
-      "shirtNumber": "8",
+      "shirtNumber": "3",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Oliver Casey",
+      "shirtNumber": "4",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Fraser Horsfall",
+      "shirtNumber": "5",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Hayden Coulson",
+      "shirtNumber": "15",
+      "position": "defender",
+      "positionKey": "2"
+    },
+    {
+      "name": "Michael Ihiekwe",
+      "shirtNumber": "20",
       "position": "defender",
       "positionKey": "2"
     },
     {
       "name": "Zac Ashworth",
-      "shirtNumber": "9",
+      "shirtNumber": "26",
       "position": "defender",
       "positionKey": "2"
     },
     {
-      "name": "Andy Lyons",
-      "shirtNumber": "10",
-      "position": "defender",
-      "positionKey": "2"
-    },
-    {
-      "name": "Danny Imray",
-      "shirtNumber": "11",
+      "name": "Dan Imray",
+      "shirtNumber": "30",
       "position": "defender",
       "positionKey": "2"
     },
     {
       "name": "Jordan Brown",
-      "shirtNumber": "12",
+      "shirtNumber": "6",
       "position": "midfielder",
       "positionKey": "3"
     },
     {
       "name": "Lee Evans",
-      "shirtNumber": "13",
+      "shirtNumber": "7",
       "position": "midfielder",
       "positionKey": "3"
     },
     {
       "name": "Albie Morgan",
-      "shirtNumber": "14",
-      "position": "midfielder",
-      "positionKey": "3"
-    },
-    {
-      "name": "Ryan Finnigan",
-      "shirtNumber": "15",
+      "shirtNumber": "8",
       "position": "midfielder",
       "positionKey": "3"
     },
     {
       "name": "George Honeyman",
-      "shirtNumber": "16",
+      "shirtNumber": "10",
       "position": "midfielder",
       "positionKey": "3"
     },
     {
-      "name": "CJ Hamilton",
-      "shirtNumber": "17",
+      "name": "Ryan Finnigan",
+      "shirtNumber": "28",
+      "position": "midfielder",
+      "positionKey": "3"
+    },
+    {
+      "name": "Spencer Knight",
+      "shirtNumber": "42",
       "position": "midfielder",
       "positionKey": "3"
     },
     {
       "name": "Niall Ennis",
-      "shirtNumber": "18",
-      "position": "forward",
-      "positionKey": "4"
-    },
-    {
-      "name": "Tom Bloxham",
-      "shirtNumber": "19",
+      "shirtNumber": "9",
       "position": "forward",
       "positionKey": "4"
     },
     {
       "name": "Ashley Fletcher",
-      "shirtNumber": "20",
+      "shirtNumber": "11",
+      "position": "forward",
+      "positionKey": "4"
+    },
+    {
+      "name": "Tom Bloxham",
+      "shirtNumber": "14",
+      "position": "forward",
+      "positionKey": "4"
+    },
+    {
+      "name": "Malcolm Ebiowei",
+      "shirtNumber": "17",
+      "position": "forward",
+      "positionKey": "4"
+    },
+    {
+      "name": "Dale Taylor",
+      "shirtNumber": "18",
+      "position": "forward",
+      "positionKey": "4"
+    },
+    {
+      "name": "CJ Hamilton",
+      "shirtNumber": "22",
       "position": "forward",
       "positionKey": "4"
     },
     {
       "name": "Kylian Kouassi",
-      "shirtNumber": "21",
+      "shirtNumber": "27",
+      "position": "forward",
+      "positionKey": "4"
+    },
+    {
+      "name": "Emil Hansson",
+      "shirtNumber": "29",
+      "position": "forward",
+      "positionKey": "4"
+    },
+    {
+      "name": "Terry Bondo",
+      "shirtNumber": "41",
       "position": "forward",
       "positionKey": "4"
     }
